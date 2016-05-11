@@ -20,7 +20,8 @@ class Person:NSObject {
     }
     override var description:String{
         get{
-            return self.name
+            var res:String = "\(name) \(age)"
+            return res
         }
     }
 }
@@ -34,13 +35,15 @@ var person5 = Person(name: "Linda", age: 34)
 //вызов геттера
 person1.howOld
 
-let personList = [person1, person2, person3, person4, person5]
+let personList: [Person] = [person1, person2, person3, person4, person5]
 
 func printPersonArray(array: [Person]) {
     var count = 1
     for i in array {
-        print("#\(count) \(i.name) \(i.age) \(i.hasCat)")
-        count++
+        count+=1
+        let str:String = "#\(count) \(i.name) \(i.age) \(i.hasCat)"
+        print(str)
+
     }
     print("")
 }
@@ -59,19 +62,23 @@ printPersonArray(personList.sort(){ $0.age < $1.age })
 
 // -----------------------------------------------------------------------
 
-let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+let names:  [String] = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+let nameArray: [Int] = []
 
 //сортировка 1
-func backwards(s1: String, _ s2: String) -> Bool {
-    //print(s1 + "  VS  " + s2)
-    return s1 > s2
+func backwards(s1: Person, _ s2: Person) -> Bool {
+    return s1.name > s2.name
 }
 
-var reversed = names.sort(backwards)
+var reversed: [Person] = personList.sort(backwards)
 print(reversed)
 
-// сортировка 2
-//reversed = names .sort({(s1: String, s2: String) -> Bool in
+
+//var personListBack = personList.sort(backwardsPerson)
+
+//// сортировка 2
+//var reversed = names .sort({(s1: String, s2: String) -> Bool in
 //    return s1 > s2
 //})
 
