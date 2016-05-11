@@ -3,7 +3,7 @@ import UIKit
 // woman = false  жен
 
 class Person: NSObject {
-    var name: String
+    let name: String
     let age: Int8
     var sex: Bool = true
     
@@ -11,43 +11,54 @@ class Person: NSObject {
         self.name = name
         self.age = age
     }
-    
-    func walk() {
-        print("someone \(name) walk")
-    }
-    
 }
 
-func makeWoman (person: Person) -> Person {
-    person.sex = false
-    return person
-}
-
-func makeMan(person: Person) -> Person {
-    person.sex = true
-    return person
+/////////////////////////////////////////////////////////////////
+func walk(person: Person) {
+    print("someone \(person.name) walk")
 }
 
 func makeManIfWoman(person: Person) -> Person {
     if person.sex == false {
         person.sex = true
         print("Woman  \(person.name) has become a man!")
-        return person
     } else {
         print("Wow! \(person.name) is a man already.")
-        return person
     }
+    return person
 }
 
 func invertSex (person: Person) -> Person {
-    
+    if person.sex {
+        person.sex = false
+        print("man \(person.name) now is a pretty woman!")
+    } else {
+        person.sex = true
+        print("woman \(person.name) now is a strong man!")
+
+    }
+    return person
 }
 
-func allTime18(person: Person) {
-    print(" ")
+func makeManIfWoman (person: Person) -> Person {
+    if person.sex == false {
+        person.sex = true
+        print("Woman  \(person.name) has become a man!")
+    } else {
+        print("Wow! \(person.name) is a man already.")
+    }
+    return person
 }
 
-//подкласс "мужчина"
+func personInfo(person: Person) {
+    if person.sex {
+        print("Man: \(person.name) | age: \(person.age) | sex: male | car: \(carColor) | year: \(person.carBirthday)")
+    } else {
+        print("Woman: \(person.name) | age: \(age) | sex: female | dress: \(dressColor)")
+    }
+}
+
+                        //подкласс "мужчина"
 class Man: Person {
     var carColor: String = "White"
     var carBirthday: Int16 = 2000
@@ -59,16 +70,22 @@ class Man: Person {
         self.carBirthday = carBirthday
     }
     
-    override func walk() {
-        print("man \(self.name) is running fast!")
+    func walk(person: Person) {
+        print("man \(person.name) is running fast!")
     }
     
-    func manInfo() {
-        print("man \(self.name) has got a \(self.carColor) car which was made in \(self.carBirthday) year")
+    func manInfo(person: Person) {
+        var s: String = " "
+        if person.sex {
+            s = "Male"
+        } else {
+            s = "Female"
+        }
+        print("man: \(name) | age: \(age) | sex: \(s) | car: \(carColor) | year: \(carBirthday) ")
     }
 }
 
-//подкласс "женщина"
+                         //подкласс "женщина"
 class Woman: Person {
     var dressColor: String = "Red"
     
@@ -78,10 +95,21 @@ class Woman: Person {
         self.dressColor = dressColor
     }
     
-    func womanInfo() {
-        print("Ж: \(name) is \(age) year(s) old")
+    func womanInfo(person: Person) {
+        var s: String = " "
+        if person.sex {
+            s = "Male"
+        } else {
+            s = "Female"
+        }
+        print("woman: \(name) | age: \(age) | sex: \(s) | dress: \(dressColor) ")
+    }
+    
+    func allTime18(person: Person) {
+        print("woman: \(name) | age: 18 | dress: \(dressColor) ")
     }
 }
+
 
 var person1 = Woman(name: "Саша", age: 22, sex: true, dressColor: "Red")
 var person2 = Woman(name: "Женя", age: 98, sex: true, dressColor: "Red")
@@ -89,8 +117,9 @@ var person2 = Woman(name: "Женя", age: 98, sex: true, dressColor: "Red")
 var person3 = Man(name: "Мэн1", age: 15, sex: false, carColor: "Black", carBirthday: 1999)
 var person4 = Man(name: "Мэн2", age: 77, sex: false, carColor: "Gray", carBirthday: 2004)
 
-var newPerson1 = person1.makeManIfWoman(person1)
-var newPerson2 = person2.makeManIfWoman(person2)
+
+//var newPerson1 = person1.makeManIfWoman(person1)
+//var newPerson3 = person2.makeManIfWoman(person3)
 
 
 //var newPerson1 = person1.makeWoman(person1)

@@ -38,7 +38,7 @@ person1.howOld
 let personList: [Person] = [person1, person2, person3, person4, person5]
 
 func printPersonArray(array: [Person]) {
-    var count = 1
+    var count = 0
     for i in array {
         count+=1
         let str:String = "#\(count) \(i.name) \(i.age) \(i.hasCat)"
