@@ -4,57 +4,69 @@ import UIKit
 
 class Person: NSObject {
     let name: String
-    let age: Int8
-    var sex: Bool = true
+    let age: Int8    // = 18
     
     init(name: String = "Unknown", age: Int8) {
         self.name = name
         self.age = age
     }
+    
+    func walk(p: Person) {
+        print("someone \(p.name) walk")
+    }
 }
 
 /////////////////////////////////////////////////////////////////
-func walk(person: Person) {
-    print("someone \(person.name) walk")
-}
 
-func makeManIfWoman(person: Person) -> Person {
-    if person.sex == false {
-        person.sex = true
-        print("Woman  \(person.name) has become a man!")
+func makeManIfWoman(who: Person?) {
+    let ss: String? = who?.name
+    if who is Man {
+        print("Man  \(who?.name) has become a man!")
     } else {
-        print("Wow! \(person.name) is a man already.")
+        print("Wow! \(who?.name) is a man already.")
     }
-    return person
+    return who?
 }
 
-func invertSex (person: Person) -> Person {
-    if person.sex {
-        person.sex = false
-        print("man \(person.name) now is a pretty woman!")
+func invertSex (p: Man) -> Person {
+    if p.sex {
+        p.sex = false
+        print("man \(p.name) now is a pretty woman!")
     } else {
-        person.sex = true
-        print("woman \(person.name) now is a strong man!")
+        p.sex = true
+        print("woman \(p.name) now is a strong man!")
 
     }
-    return person
+    return p
 }
 
-func makeManIfWoman (person: Person) -> Person {
-    if person.sex == false {
-        person.sex = true
-        print("Woman  \(person.name) has become a man!")
-    } else {
-        print("Wow! \(person.name) is a man already.")
+func x(p:Person?){
+    
+    let xxx:String? = p?.name
+    if p is Woman{
+        print("Object \(xxx) is a woman")
+
+    }else if p is Man{
+        print("Object \(p?.name) is a man")
+    }else{
+        print("Object \(p?.name) is a person")
+
     }
-    return person
 }
+//
+//func x(p:Woman){
+//    print("Object \(p.name) is a woman")
+//}
+//
+//func x(p:Man){
+//    print("Object \(p.name) is a man")
+//}
 
-func personInfo(person: Person) {
-    if person.sex {
-        print("Man: \(person.name) | age: \(person.age) | sex: male | car: \(carColor) | year: \(person.carBirthday)")
-    } else {
-        print("Woman: \(person.name) | age: \(age) | sex: female | dress: \(dressColor)")
+func personInfo(p: Person?) {
+    if p is Man {
+        print("man")
+    } else if p is Woman {
+       print("woman")
     }
 }
 
@@ -62,6 +74,7 @@ func personInfo(person: Person) {
 class Man: Person {
     var carColor: String = "White"
     var carBirthday: Int16 = 2000
+    var sex: Bool = true
     
     init(name: String = "Unknown", age: Int8, sex: Bool, carColor: String, carBirthday: Int16) {
         super.init(name: name, age: age)
@@ -70,66 +83,68 @@ class Man: Person {
         self.carBirthday = carBirthday
     }
     
-    func walk(person: Person) {
+    override func walk(person: Person) {
         print("man \(person.name) is running fast!")
     }
     
-    func manInfo(person: Person) {
-        var s: String = " "
-        if person.sex {
-            s = "Male"
-        } else {
-            s = "Female"
-        }
-        print("man: \(name) | age: \(age) | sex: \(s) | car: \(carColor) | year: \(carBirthday) ")
+    func manInfo(pers: Man) {
+        print("man: \(self.name) | age: \(self.age) | sex: Male | car: \(self.carColor) | year: \(self.carBirthday) ")
     }
 }
 
                          //подкласс "женщина"
 class Woman: Person {
-    var dressColor: String = "Red"
+    var dressColor: String
+    var sex: Bool = true
     
     init (name: String = "Unknown", age: Int8, sex: Bool, dressColor: String) {
-        super.init(name: name, age: 18)
         self.sex = sex
         self.dressColor = dressColor
+        super.init(name: name, age: 18)
     }
     
     func womanInfo(person: Person) {
-        var s: String = " "
-        if person.sex {
-            s = "Male"
-        } else {
-            s = "Female"
-        }
-        print("woman: \(name) | age: \(age) | sex: \(s) | dress: \(dressColor) ")
+        print("woman: \(name) | age: \(age) | sex: Female | dress: \(dressColor) ")
     }
     
-    func allTime18(person: Person) {
-        print("woman: \(name) | age: 18 | dress: \(dressColor) ")
+    func allTime18(sss: Woman) -> Woman {
+        print("woman: \(self.name) | age: 18 | dress: \(self.dressColor) ")
+        return sss
     }
 }
+//=========================================================================
+var pers1:Person = Person(name: "Name1", age: 13)
+var man1:Man = Man(name: "Man1", age: 77, sex: true, carColor: "Green", carBirthday: 2010)
+var wom1:Woman = Woman(name: "Жен4", age: 98, sex: false, dressColor: "Green")
+
+if let nonnil:Man = man1 {
+    x(nonnil)
+}
+
+//x(man1)
+x(wom1)
 
 
-var person1 = Woman(name: "Саша", age: 22, sex: true, dressColor: "Red")
-var person2 = Woman(name: "Женя", age: 98, sex: true, dressColor: "Red")
+if let xx:Person = man1{
+    x(xx)
+}
+print("s")
+personInfo(man1)
+print("f")
+var person1 = Woman(name: "Жен1", age: 22, sex: false, dressColor: "Red")
+var person2 = Woman(name: "Жен2", age: 98, sex: false, dressColor: "Red")
 //person3.age = 25
-var person3 = Man(name: "Мэн1", age: 15, sex: false, carColor: "Black", carBirthday: 1999)
-var person4 = Man(name: "Мэн2", age: 77, sex: false, carColor: "Gray", carBirthday: 2004)
+var person3 = Man(name: "Мэн1", age: 15, sex: true, carColor: "Black", carBirthday: 1999)
+var person4 = Man(name: "Мэн2", age: 77, sex: true, carColor: "Gray", carBirthday: 2004)
+
+makeManIfWoman(person1)
+
+//var newPerson3 = makeManIfWoman(person3)
+
+//var newPerson4 = invertSex(newPerson1)
+//var newPerson5 = invertSex(newPerson3)
 
 
-//var newPerson1 = person1.makeManIfWoman(person1)
-//var newPerson3 = person2.makeManIfWoman(person3)
-
-
-//var newPerson1 = person1.makeWoman(person1)
-//var newPerson2 = person2.makeWoman(person2)
-//var newPerson3 = person1.makeMan(person2)
-//var newPerson4 = person3.makeManIfWoman(person3)
-//var newPerson5 = person4.makeManIfWoman(person4)
-//person1.walk()
-//person4.walk()
-//person3.womanInfo()
-//person4.manInfo()
+var woman1 = person1.allTime18(person1)
 
 
