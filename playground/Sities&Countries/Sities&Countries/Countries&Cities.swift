@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class Countries: NSObject {
+    
+    override init() {
+    }
+
+let cities: [String: String] = [
+    "UK": "London",
+    "USA": "Washington",
+    "Canada": "Ottawa"
+]
+    
+}
