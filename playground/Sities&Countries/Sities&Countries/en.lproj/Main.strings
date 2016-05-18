@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Canada"; ObjectID = "Gt4-gt-Z4p"; */
+"Gt4-gt-Z4p.text" = "Canada";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "JpS-wB-2p1"; */
+"JpS-wB-2p1.text" = "Detail";
+
+/* Class = "UILabel"; text = "Canada"; ObjectID = "K0u-FD-K6G"; */
+"K0u-FD-K6G.text" = "Canada";
+
+/* Class = "UILabel"; text = "USA"; ObjectID = "NQ7-Ud-nFc"; */
+"NQ7-Ud-nFc.text" = "USA";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "X8e-Gq-IJY"; */
+"X8e-Gq-IJY.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "LInk1.com"; ObjectID = "g4B-BW-BHO"; */
+"g4B-BW-BHO.text" = "LInk1.com";
+
+/* Class = "UILabel"; text = "UK"; ObjectID = "kzf-Pm-HVU"; */
+"kzf-Pm-HVU.text" = "UK";
+
+/* Class = "UINavigationItem"; prompt = "table1"; ObjectID = "leT-o5-bLD"; */
+"leT-o5-bLD.prompt" = "table1";
+
+/* Class = "UINavigationItem"; title = "list of countries"; ObjectID = "leT-o5-bLD"; */
+"leT-o5-bLD.title" = "list of countries";
+
+/* Class = "UIBarButtonItem"; title = "fast Back!"; ObjectID = "mFD-bN-JP6"; */
+"mFD-bN-JP6.title" = "fast Back!";
+
+/* Class = "UIViewController"; title = "More information"; ObjectID = "pha-Ot-IaY"; */
+"pha-Ot-IaY.title" = "More information";
