@@ -10,12 +10,11 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
     
-    let cities: [String] = [
-        "UK",
-        "USA",
-        "Canada", "Ottawa",
-    ]
-
+//    let cities: [String] = ["UA", "USA", "Canada", "UK"]
+//    
+//    let imagesName: [String] = ["ua", "us", "ca", "gb"]
+    let countriesArray = [(name:"UA", image:"ua"), (name:"USA", image:"us"), (name:"Canada", image:"ca"), (name:"UK", image:"gb")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,15 +39,32 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.cities.count
+        return self.self.countriesArray.count
+    }
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MobileDev", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel!.text = cities[indexPath.row]
+        cell.imageView!.image = UIImage(named: "ru")
+        return cell
+    }*/
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MobileDev", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel!.text = countriesArray[indexPath.row].name
+        //cell.imageView!.image = UIImage(named: "ru")
+        cell.imageView!.image = UIImage(named:countriesArray[indexPath.row].image)
+        return cell
     }
     
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("MobileDev", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel!.text = cities[indexPath.row]
         return cell
-    }
+    } */
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
