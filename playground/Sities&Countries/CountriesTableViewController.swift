@@ -12,7 +12,7 @@ class CountriesTableViewController: UITableViewController {
     
 //    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
 //    let imagesName: [String] = ["ua", "us", "gb", "ca"]
-    let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "ua"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
+    let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "us"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
