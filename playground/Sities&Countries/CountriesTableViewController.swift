@@ -9,6 +9,9 @@
 import UIKit
 
 class CountriesTableViewController: UITableViewController {
+    
+    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
+    let imagesName: [String] = ["ua", "us", "gb", "ca"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +32,24 @@ class CountriesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.countriesName.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = countriesName[indexPath.row]
+        cell.imageView?.image = UIImage(named: imagesName[indexPath.row])
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
