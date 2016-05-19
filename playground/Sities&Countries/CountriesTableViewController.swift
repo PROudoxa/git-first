@@ -9,6 +9,11 @@
 import UIKit
 
 class CountriesTableViewController: UITableViewController {
+
+    let url = "http://apple.com"
+
+    @IBOutlet weak var webView: UIWebView!
+
     
 //    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
 //    let imagesName: [String] = ["ua", "us", "gb", "ca"]
@@ -16,7 +21,12 @@ class CountriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let requestURL = NSURL(string:url)
+        let request = NSURLRequest(URL: requestURL!)
+        webView.loadRequest(request)
 
+        // Do any additional setup after loading the view, typically from a nib.
+ 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
