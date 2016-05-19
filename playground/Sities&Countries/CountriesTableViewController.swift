@@ -10,8 +10,9 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
     
-    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
-    let imagesName: [String] = ["ua", "us", "gb", "ca"]
+//    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
+//    let imagesName: [String] = ["ua", "us", "gb", "ca"]
+    let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "ua"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +38,14 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.countriesName.count
+        return self.countriesArray.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = countriesName[indexPath.row]
-        cell.imageView?.image = UIImage(named: imagesName[indexPath.row])
+        cell.textLabel?.text = countriesArray[indexPath.row].name
+        cell.imageView?.image = UIImage(named: countriesArray[indexPath.row].image)
         // Configure the cell...
 
         return cell
