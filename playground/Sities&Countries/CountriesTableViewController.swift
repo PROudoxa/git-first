@@ -11,9 +11,10 @@ import UIKit
 class CountriesTableViewController: UITableViewController {
 
     let url = "http://apple.com"
-
+//    let url = "http://bm.img.com.ua/nxs/img/prikol/images/large/4/9/312294.jpg"
+    
     @IBOutlet weak var webView: UIWebView!
-
+    @IBOutlet weak var myImage: UIImageView!
     
 //    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
 //    let imagesName: [String] = ["ua", "us", "gb", "ca"]
@@ -21,17 +22,17 @@ class CountriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // for image
+        let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
+        let imgData: NSData = NSData(contentsOfURL: imgURL)!
+        myImage.image = UIImage(data: imgData)
+        
+        //weblink for webView------
         let requestURL = NSURL(string:url)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
-
-        // Do any additional setup after loading the view, typically from a nib.
- 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //-------------------------
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +52,6 @@ class CountriesTableViewController: UITableViewController {
         return self.countriesArray.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = countriesArray[indexPath.row].name
