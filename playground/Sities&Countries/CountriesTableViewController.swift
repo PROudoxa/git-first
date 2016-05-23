@@ -37,7 +37,6 @@ class CountriesTableViewController: UITableViewController {
         //---------------------------
     }
 
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,19 +60,21 @@ class CountriesTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
-        //let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as UITableViewCell
         countryName = countriesArray[indexPath!.row].name
+       // prepareForSegue(UIStoryboardSegue, sender: NSObject.self)
+        print("1")
+    } */
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        countryName = countriesArray[indexPath.row].name
+        return indexPath
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)
-        //let country = countriesArray[indexPath.row].name
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
         destViewController.country = countryName
     }
     
-
-
 }
