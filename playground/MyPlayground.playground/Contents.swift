@@ -108,5 +108,10 @@ switch cardValue {
         print("Не найдено")
 }
 
+/*// for image bottom ------------
+ let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
+ let imgData: NSData = NSData(contentsOfURL: imgURL)!
+ myImage.image = UIImage(data: imgData)
+ //------------------------------ */
 
 

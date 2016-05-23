@@ -11,29 +11,21 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    let url = "http://apple.com"
+    let url = "http://apple.com"   //link for webView on the main screen
     var countryName: String = ""
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
     
-//    let countriesName: [String] = ["Ukraine", "USA", "United Kingdom", "Canada"]
-//    let imagesName: [String] = ["ua", "us", "gb", "ca"]
     let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "us"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*// for image bottom ------------
-        let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
-        let imgData: NSData = NSData(contentsOfURL: imgURL)!
-        myImage.image = UIImage(data: imgData)
-        //------------------------------ */
         //weblink for webView--------
         let requestURL = NSURL(string:url)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
-        
         //---------------------------
     }
 
@@ -53,19 +45,10 @@ class CountriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = countriesArray[indexPath.row].name
         cell.imageView?.image = UIImage(named: countriesArray[indexPath.row].image)
-        // Configure the cell...
         return cell
     }
-    //
     
     // MARK: - Navigation
-    
-    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow
-        countryName = countriesArray[indexPath!.row].name
-       // prepareForSegue(UIStoryboardSegue, sender: NSObject.self)
-        print("1")
-    } */
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         countryName = countriesArray[indexPath.row].name
