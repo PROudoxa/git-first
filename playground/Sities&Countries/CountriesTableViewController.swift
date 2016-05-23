@@ -8,15 +8,15 @@
 
 import UIKit
 
-
 class CountriesTableViewController: UITableViewController {
 
-    let url = "http://apple.com"   //link for webView on the main screen
+    let url = "http://apple.com"   //Link for webView on the main screen
     var countryName: String = ""
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
     
+    //Arrey for countries and their pictures
     let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "us"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
 
     override func viewDidLoad() {
