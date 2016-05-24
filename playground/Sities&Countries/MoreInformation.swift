@@ -10,16 +10,15 @@ import UIKit
 
 class MoreInformation: UIViewController {
     
-    var country: String = ""
-    
-    var fromResources: Resources? = nil
+    let toGetResources: Resources = Resources()   // object to get data from resources
+    var countryName: String = ""
         
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fromResources = Resources()
-        webView.loadRequest(fromResources!.changeURL(fromResources!.country))
-        //webView.loadRequest(fromResources!.requestForMoreInfo)
+        
+        let urlWiki = NSURL (string: toGetResources.changeURL(countryName))
+        webView.loadRequest(NSURLRequest(URL: urlWiki!))  // Shows the link for countries "more information"
     }
 }

@@ -10,20 +10,23 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    let url = "http://apple.com"   //Link for webView on the main screen
+    let toGetResources: Resources = Resources()
     var countryName: String = ""
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
-    
-    //Arrey for countries and their pictures
-    let countriesArray = [(name: "Ukraine", image: "ua"), (name: "USA", image: "us"), (name: "United Kingdom", image: "gb"), (name: "Canada", image: "ca")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*// for image bottom ------------
+         let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
+         let imgData: NSData = NSData(contentsOfURL: imgURL)!
+         myImage.image = UIImage(data: imgData)
+         //------------------------------ */
+        
         //weblink for webView--------
-        let requestURL = NSURL(string:url)
+        let requestURL = NSURL(string: toGetResources.urlWebView)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
         //---------------------------
@@ -38,26 +41,26 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.countriesArray.count
+        return toGetResources.countriesArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = countriesArray[indexPath.row].name
-        cell.imageView?.image = UIImage(named: countriesArray[indexPath.row].image)
+        cell.textLabel?.text = toGetResources.countriesArray[indexPath.row].name
+        cell.imageView?.image = UIImage(named: toGetResources.countriesArray[indexPath.row].image)
         return cell
     }
     
     // MARK: - Navigation
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        countryName = countriesArray[indexPath.row].name
+        countryName = toGetResources.countriesArray[indexPath.row].name // To catch the name of selected cell
         return indexPath
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
-        destViewController.country = countryName
+        destViewController.countryName = countryName       // To cast the name to "More information" screen
     }
     
 }
