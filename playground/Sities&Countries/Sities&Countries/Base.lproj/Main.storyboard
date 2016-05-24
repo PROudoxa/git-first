@@ -10,7 +10,7 @@
         <scene sceneID="2Me-Uo-QJ6">
             <objects>
                 <navigationController id="Kkx-Ta-pKG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1OT-7b-7MK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1OT-7b-7MK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -27,21 +27,21 @@
             <objects>
                 <tableViewController id="MWd-9c-sNm" customClass="CountriesTableViewController" customModule="Sities_Countries" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0uO-Zu-iDQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <webView key="tableHeaderView" contentMode="scaleToFill" restorationIdentifier="webView" id="Yuo-CD-rdH">
-                            <rect key="frame" x="0.0" y="64" width="600" height="239"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                         </webView>
                         <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Pc9-s7-Jrc">
-                            <rect key="frame" x="0.0" y="375" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="311" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AV" textLabel="kzf-Pm-HVU" style="IBUITableViewCellStyleDefault" id="O75-LJ-EzG">
-                                <rect key="frame" x="0.0" y="331" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="267" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O75-LJ-EzG" id="faw-8a-ZYK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -88,11 +88,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Z78-A0-Iu0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZGg-e8-uwg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5s-Wv-dQA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hidden" value="NO"/>

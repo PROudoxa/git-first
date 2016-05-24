@@ -19,6 +19,8 @@ class CountriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         /*// for image bottom ------------
          let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
          let imgData: NSData = NSData(contentsOfURL: imgURL)!
@@ -33,7 +35,6 @@ class CountriesTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

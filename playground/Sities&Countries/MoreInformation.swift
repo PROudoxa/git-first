@@ -10,6 +10,7 @@ import UIKit
 
 class MoreInformation: UIViewController {
     
+    // @IBOutlet weak var scrollView1: UIScrollView!
     let toGetResources: Resources = Resources()   // object to get data from resources
     var countryName: String = ""
         
@@ -17,6 +18,7 @@ class MoreInformation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "about \(countryName)"
         
         let urlWiki = NSURL (string: toGetResources.changeURL(countryName))
         webView.loadRequest(NSURLRequest(URL: urlWiki!))  // Shows the link for countries "more information"
