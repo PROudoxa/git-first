@@ -19,6 +19,7 @@ class CountriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //let toGetResources: Resources? = Resources()
         // for image bottom ------------
         let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
         if let url2 = imgURL {
@@ -49,21 +50,26 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        return toGetResources.countriesArray.count
+        if let a = toGetResources {
+            return a.countriesArray.count
+        } else {return 1}
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = toGetResources.countriesArray[indexPath.row].name
-        cell.imageView?.image = UIImage(named: toGetResources.countriesArray[indexPath.row].image)
+        if let a = toGetResources {
+            cell.textLabel?.text = a.countriesArray[indexPath.row].name
+            cell.imageView?.image = UIImage(named: a.countriesArray[indexPath.row].image)
+        }
         return cell
     }
     
     // MARK: - Navigation
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        countryName = toGetResources.countriesArray[indexPath.row].name // To catch the name of selected cell
+        if let a = toGetResources {
+            countryName = a.countriesArray[indexPath.row].name // To catch the name of selected cell
+        }
         return indexPath
     }
     
