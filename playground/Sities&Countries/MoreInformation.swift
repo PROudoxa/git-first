@@ -11,7 +11,7 @@ import UIKit
 class MoreInformation: UIViewController {
     
     // @IBOutlet weak var scrollView1: UIScrollView!
-    let toGetResources: Resources = Resources()   // object to get data from resources
+    var toGetResources: Resources? = nil   // object to get data from resources
     var countryName: String = ""
         
     @IBOutlet weak var webView: UIWebView!
@@ -20,7 +20,19 @@ class MoreInformation: UIViewController {
         super.viewDidLoad()
         self.title = "about \(countryName)"
         
-        let urlWiki = NSURL (string: toGetResources.changeURL(countryName))
-        webView.loadRequest(NSURLRequest(URL: urlWiki!))  // Shows the link for countries "more information"
+//        if let b: Resources = toGetResources {
+//                let urlWiki = NSURL (string: b.changeURL(countryName))
+//            if let c = urlWiki {
+//                webView.loadRequest(NSURLRequest(URL: c))  // Shows the link for countries "more information"
+//            }
+//        }
+        
+            let r: String? = toGetResources?.changeURL(countryName)
+                if let a = r {
+                    let urlWiki = NSURL (string: a)
+                    if let c = urlWiki {
+                        webView.loadRequest(NSURLRequest(URL: c))  // Shows the link for countries "more information"
+                    }
+                }
     }
 }

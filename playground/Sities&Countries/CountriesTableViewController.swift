@@ -10,7 +10,7 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    let toGetResources: Resources = Resources()
+    let toGetResources: Resources? = nil
     var countryName: String = ""
 
     @IBOutlet weak var webView: UIWebView!
@@ -19,18 +19,24 @@ class CountriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        /*// for image bottom ------------
-         let imgURL: NSURL = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")!
-         let imgData: NSData = NSData(contentsOfURL: imgURL)!
-         myImage.image = UIImage(data: imgData)
-         //------------------------------ */
+        // for image bottom ------------
+        let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
+        if let url2 = imgURL {
+         let imgData: NSData? = NSData(contentsOfURL: url2)
+            if let url3 = imgData {
+                myImage.image = UIImage(data: url3)
+            }
+        }
+         //------------------------------
         
         //weblink for webView--------
-        let requestURL = NSURL(string: toGetResources.urlWebView)
-        let request = NSURLRequest(URL: requestURL!)
-        webView.loadRequest(request)
+        if let a = toGetResources {
+        let requestURL = NSURL(string: a.urlWebView)
+            if let b = requestURL {
+                let request = NSURLRequest(URL: b)
+                webView.loadRequest(request)
+            }
+        }
         //---------------------------
     }
 
@@ -43,6 +49,7 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return toGetResources.countriesArray.count
     }
 
@@ -63,6 +70,7 @@ class CountriesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
         destViewController.countryName = countryName       // To cast the name to "More information" screen
+
     }
     
 }
