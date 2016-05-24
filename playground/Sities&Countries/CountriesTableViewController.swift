@@ -10,7 +10,7 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    let toGetResources: Resources? = nil
+    var toGetResources: Resources? = nil
     var countryName: String = ""
 
     @IBOutlet weak var webView: UIWebView!
@@ -18,8 +18,7 @@ class CountriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let toGetResources: Resources? = Resources()
+        self.toGetResources = Resources()
         // for image bottom ------------
         let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
         if let url2 = imgURL {
@@ -76,7 +75,7 @@ class CountriesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
         destViewController.countryName = countryName       // To cast the name to "More information" screen
-
+        destViewController.toGetResources = toGetResources       // To cast the name to "More information" screen
     }
     
 }
