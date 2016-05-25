@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:     textLabel.text = "America has selected"
+        case 1:     textLabel.text = "Europe has selected"
+        case 2:     textLabel.text = "All countries have selected"
+        default:    break
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +31,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
+    
 }
-
