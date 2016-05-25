@@ -15,15 +15,14 @@ class CountriesTableViewController: UITableViewController {
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.toGetResources = Resources()
         
         // for image in the bottom ----------
-        //let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
-        let imgURL: NSURL? = NSURL(string: "https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=6d1a6d1c5a7eb63d0c411b1d019f0b30")
+        let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
+        //let imgURL: NSURL? = NSURL(string: "https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=6d1a6d1c5a7eb63d0c411b1d019f0b30")
         if let url2 = imgURL {
          let imgData: NSData? = NSData(contentsOfURL: url2)
             if let url3 = imgData {
@@ -78,6 +77,13 @@ class CountriesTableViewController: UITableViewController {
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
         destViewController.countryName = countryName             // To cast the name to "More information" screen
         destViewController.toGetResources = toGetResources       // To cast the object link to "More information" screen
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let vw = UIView()
+        vw.backgroundColor = UIColor.greenColor()
+        
+        return vw
     }
     
 }

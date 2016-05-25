@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA85D9D01CEDB45500E36F1B /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85D9CF1CEDB45500E36F1B /* CountriesTableViewController.swift */; };
 		FA9363511CEDE9A9001FD6C3 /* MoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9363501CEDE9A9001FD6C3 /* MoreInformation.swift */; };
+		FA9A429D1CF6615800520B34 /* headerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429C1CF6615800520B34 /* headerTableView.swift */; };
 		FAD14A391CEC69E400C5A31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD14A381CEC69E400C5A31D /* AppDelegate.swift */; };
 		FAD14A3E1CEC69E400C5A31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD14A3C1CEC69E400C5A31D /* Main.storyboard */; };
 		FAD14A401CEC69E400C5A31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD14A3F1CEC69E400C5A31D /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		FA85D9CF1CEDB45500E36F1B /* CountriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 		FA9363501CEDE9A9001FD6C3 /* MoreInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInformation.swift; sourceTree = "<group>"; };
+		FA9A429C1CF6615800520B34 /* headerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableView.swift; sourceTree = "<group>"; };
 		FAD14A351CEC69E400C5A31D /* Sities&Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sities&Countries.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD14A381CEC69E400C5A31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD14A3D1CEC69E400C5A31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		FAD14A2C1CEC69E400C5A31D = {
 			isa = PBXGroup;
 			children = (
+				FA9A429C1CF6615800520B34 /* headerTableView.swift */,
 				FAD4A1881CF321350067CAB9 /* DataSources */,
 				FA9363501CEDE9A9001FD6C3 /* MoreInformation.swift */,
 				FA85D9CF1CEDB45500E36F1B /* CountriesTableViewController.swift */,
@@ -276,6 +279,7 @@
 				FA9363511CEDE9A9001FD6C3 /* MoreInformation.swift in Sources */,
 				FAD4A18A1CF3225D0067CAB9 /* Resources.swift in Sources */,
 				FA85D9D01CEDB45500E36F1B /* CountriesTableViewController.swift in Sources */,
+				FA9A429D1CF6615800520B34 /* headerTableView.swift in Sources */,
 				FAD14A391CEC69E400C5A31D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
