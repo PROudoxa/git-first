@@ -29,17 +29,50 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select pls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxA-Mf-4k8">
-                                <rect key="frame" x="128" y="140" width="201" height="21"/>
+                                <rect key="frame" x="76" y="140" width="253" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-zm-HFj">
+                                <rect key="frame" x="0.0" y="169" width="192" height="349"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7NK-2y-ua0">
+                                        <rect key="frame" x="-42" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQt-OM-2Hx">
+                                <rect key="frame" x="208" y="169" width="174" height="380"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-o9-dbv">
+                                        <rect key="frame" x="-21" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0q-GD-jFz">
+                                <rect key="frame" x="402" y="157" width="178" height="403"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4i-lV-0CR">
+                                        <rect key="frame" x="-62" y="-8" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="firstImage" destination="7NK-2y-ua0" id="riT-k9-i30"/>
+                        <outlet property="firstView" destination="EHU-zm-HFj" id="h1Y-7S-b9T"/>
+                        <outlet property="secondImage" destination="vF6-o9-dbv" id="jkn-yM-Bzb"/>
+                        <outlet property="secondView" destination="mQt-OM-2Hx" id="GnJ-q6-xnQ"/>
                         <outlet property="segmentControl" destination="57B-0a-YoG" id="JyT-Ix-nmT"/>
                         <outlet property="textLabel" destination="cxA-Mf-4k8" id="DXd-mJ-CKp"/>
+                        <outlet property="thirdImage" destination="E4i-lV-0CR" id="LW0-1U-4lz"/>
+                        <outlet property="thirdView" destination="T0q-GD-jFz" id="Olz-gG-VsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
