@@ -29,13 +29,32 @@ class Resources: NSObject {
         "USA":              "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D1%91%D0%BD%D0%BD%D1%8B%D0%B5_%D0%A8%D1%82%D0%B0%D1%82%D1%8B_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8"
     ]
     
+    // Dictionary of links of emblems
+    let emblemWikiURL: [String: String] = [
+        "Ukraine":          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Lesser_Coat_of_Arms_of_Ukraine.svg/100px-Lesser_Coat_of_Arms_of_Ukraine.svg.png",
+        "United Kingdom":   "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Royal_Coat_of_Arms_of_the_United_Kingdom.svg/100px-Royal_Coat_of_Arms_of_the_United_Kingdom.svg.png",
+        "Canada":           "https://upload.wikimedia.org/wikipedia/ru/thumb/4/4f/Coat_of_arms_of_Canada.svg/100px-Coat_of_arms_of_Canada.svg.png",
+        "USA":              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/100px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+    ]
+    
     func changeURL(country: String) -> String {
         switch country {
-            case "Ukraine":        url = countriesWikiURL["Ukraine"]!
-            case "USA":            url = countriesWikiURL["USA"]!
-            case "United Kingdom": url = countriesWikiURL["United Kingdom"]!
-            case "Canada":         url = countriesWikiURL["Canada"]!
+            case "Ukraine":        url = countriesWikiURL[country]!
+            case "USA":            url = countriesWikiURL[country]!
+            case "United Kingdom": url = countriesWikiURL[country]!
+            case "Canada":         url = countriesWikiURL[country]!
             default:               break
+        }
+        return  url
+    }
+    
+    func changeURLEmblem(country: String) -> String {
+        switch country {
+        case "Ukraine":        url = emblemWikiURL[country]!
+        case "USA":            url = emblemWikiURL[country]!
+        case "United Kingdom": url = emblemWikiURL[country]!
+        case "Canada":         url = emblemWikiURL[country]!
+        default:               break
         }
         return  url
     }

@@ -10,30 +10,35 @@ import UIKit
 
 class MoreInformation: UIViewController {
     
-    // @IBOutlet weak var scrollView1: UIScrollView!
     var toGetResources: Resources? = nil   // object to get data from resources
     var countryName: String = ""
     
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var emblemImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "about \(countryName)"
         
-//        if let b: Resources = toGetResources {
-//                let urlWiki = NSURL (string: b.changeURL(countryName))
-//            if let c = urlWiki {
-//                webView.loadRequest(NSURLRequest(URL: c))  // Shows the link for countries "more information"
-//            }
-//        }
+        // Shows the link for countries "more information" ----
+        let r: String? = toGetResources?.changeURL(countryName)
+        if let a = r {
+            let urlWiki = NSURL (string: a)
+            if let c = urlWiki {
+                webView.loadRequest(NSURLRequest(URL: c))
+            }
+        }// ----------------------------------------------------
         
-            let r: String? = toGetResources?.changeURL(countryName)
-                if let a = r {
-                   let urlWiki = NSURL (string: a)
-                   if let c = urlWiki {
-                       webView.loadRequest(NSURLRequest(URL: c))  // Shows the link for countries "more information"
-                   }
+        // Shows emblem image -----------
+        let url: String? = toGetResources?.changeURLEmblem(countryName) // is waiting for the url from Resources
+        if let a = url {
+            let imgURL: NSURL? = NSURL(string: a)
+            if let url2 = imgURL {
+                let imgData: NSData? = NSData(contentsOfURL: url2)
+                if let url3 = imgData {
+                    emblemImage.image = UIImage(data: url3)
                 }
+            }
+        } // ----------------------------
     }
 }
