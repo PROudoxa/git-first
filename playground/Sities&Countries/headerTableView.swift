@@ -8,11 +8,9 @@
 
 import UIKit
 
-class HeaderSegment: UIViewController {
+class HeaderSegment: UIView {
     
-
     @IBOutlet weak var textLabel: UILabel!
-    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -26,5 +24,12 @@ class HeaderSegment: UIViewController {
         default:    break
         }
     }
+    
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "ViewForSegment", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! UIView
+    }
+    
+
+    
 }
 
