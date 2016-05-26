@@ -10,18 +10,31 @@ import UIKit
 
 class HeaderSegment: UIView {
     
+    var toGetResources: Resources? = nil
+    
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    var referanceOnTableView: UITableView? = nil
+    
     @IBAction func indexChanged(sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
-        case 0:
-            textLabel.text = "America has selected"
-        case 1:
-            textLabel.text = "Europe has selected"
-        case 2:
-            textLabel.text = "All countries have selected"
-        default:    break
+            case 0:
+                textLabel.text = "America has selected"
+                toGetResources = ResourcesAmerica()
+                referanceOnTableView?.reloadData()
+                print("america")
+
+            case 1:
+                textLabel.text = "Europe has selected"
+                toGetResources = ResourcesEurope()
+                referanceOnTableView?.reloadData()
+                print("europe")
+
+//            case 2:
+//                textLabel.text = "All countries have selected"
+            // склеить два массива и присвоить ссылку.
+                default:    break
         }
     }
     

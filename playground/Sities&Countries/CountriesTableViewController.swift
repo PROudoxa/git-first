@@ -10,15 +10,19 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    var toGetResources: Resources? = nil
+    var toGetResources: Resources? {
+        get{
+            return box?.toGetResources
+        }
+    }
+    
     var countryName: String = ""
-
+    var box: HeaderSegment? = nil
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.toGetResources = Resources()
         
         // for image in the bottom ----------
         let imgURL: NSURL? = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/135px-Flag_of_Canada.svg.png")
@@ -51,15 +55,15 @@ class CountriesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if let a = toGetResources {
-            return a.countriesArray.count
+            return a.countriesArrayWithPicture.count
         } else { return 1 }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
         if let a = toGetResources {
-            cell.textLabel?.text = a.countriesArray[indexPath.row].name
-            cell.imageView?.image = UIImage(named: a.countriesArray[indexPath.row].image)
+            cell.textLabel?.text = a.countriesArrayWithPicture[indexPath.row].name
+            cell.imageView?.image = UIImage(named: a.countriesArrayWithPicture[indexPath.row].image)
         }
         return cell
     }
@@ -68,7 +72,7 @@ class CountriesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         if let a = toGetResources {
-            countryName = a.countriesArray[indexPath.row].name // To catch the name of selected cell
+            countryName = a.countriesArrayWithPicture[indexPath.row].name // To catch the name of selected cell
         }
         return indexPath
     }
@@ -81,7 +85,9 @@ class CountriesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = HeaderSegment.instanceFromNib()
-        
+        box = view as? HeaderSegment
+        box?.referanceOnTableView = tableView
+
         return view
     }
     

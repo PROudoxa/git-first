@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelForSegment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP4-I9-05m">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select pls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP4-I9-05m">
                     <rect key="frame" x="171" y="0.0" width="259" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -22,14 +22,13 @@
                     <segments>
                         <segment title="America"/>
                         <segment title="Europe"/>
-                        <segment title="Both"/>
                     </segments>
                     <connections>
                         <action selector="indexChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="ZAk-fd-9tD"/>
                     </connections>
                 </segmentedControl>
             </subviews>
-            <color key="backgroundColor" red="0.28311218869999999" green="0.90588235289999997" blue="0.64692185570000005" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="segmentControl" destination="viI-pZ-siu" id="1VT-Eh-Yyx"/>
                 <outlet property="textLabel" destination="rP4-I9-05m" id="mk8-mG-Sv4"/>
