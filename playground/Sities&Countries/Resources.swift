@@ -92,7 +92,7 @@ class ResourcesEurope: Resources {
     
     func changeURL(country: String) -> String {
         switch country {
-            case "Germany":         url = countriesWikiURL[country]!
+            case "Germany":        url = countriesWikiURL[country]!
             case "Ukraine":        url = countriesWikiURL[country]!
             case "United Kingdom": url = countriesWikiURL[country]!
             default:               break

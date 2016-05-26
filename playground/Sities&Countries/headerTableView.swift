@@ -23,17 +23,10 @@ class HeaderSegment: UIView {
                 textLabel.text = "America has selected"
                 toGetResources = ResourcesAmerica()
                 referanceOnTableView?.reloadData()
-                print("america")
-
             case 1:
                 textLabel.text = "Europe has selected"
                 toGetResources = ResourcesEurope()
                 referanceOnTableView?.reloadData()
-                print("europe")
-
-//            case 2:
-//                textLabel.text = "All countries have selected"
-            // склеить два массива и присвоить ссылку.
                 default:    break
         }
     }

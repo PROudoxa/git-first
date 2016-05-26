@@ -10,14 +10,12 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    var toGetResources: Resources? {
-        get{
-            return box?.toGetResources
-        }
-    }
+    var viewFromResources: Resources? { get{ return linkToGetHeader?.toGetResources ?? ResourcesAmerica() } }
     
     var countryName: String = ""
-    var box: HeaderSegment? = nil
+    var linkToGetHeader: HeaderSegment? = nil
+    let headerView = HeaderSegment.instanceFromNib()
+
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var myImage: UIImageView!
     
@@ -35,7 +33,7 @@ class CountriesTableViewController: UITableViewController {
         }
          //----------------------------------
         //weblink for webView--------
-        if let a = toGetResources {
+        if let a = viewFromResources {
         let requestURL = NSURL(string: a.urlWebView)
             if let b = requestURL {
                 let request = NSURLRequest(URL: b)
@@ -54,14 +52,14 @@ class CountriesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let a = toGetResources {
+        if let a = viewFromResources {
             return a.countriesArrayWithPicture.count
         } else { return 1 }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AV", forIndexPath: indexPath) as UITableViewCell
-        if let a = toGetResources {
+        if let a = viewFromResources {
             cell.textLabel?.text = a.countriesArrayWithPicture[indexPath.row].name
             cell.imageView?.image = UIImage(named: a.countriesArrayWithPicture[indexPath.row].image)
         }
@@ -71,7 +69,7 @@ class CountriesTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if let a = toGetResources {
+        if let a = viewFromResources {
             countryName = a.countriesArrayWithPicture[indexPath.row].name // To catch the name of selected cell
         }
         return indexPath
@@ -80,15 +78,14 @@ class CountriesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destViewController: MoreInformation = segue.destinationViewController as! MoreInformation
         destViewController.countryName = countryName             // To cast the name to "More information" screen
-        destViewController.toGetResources = toGetResources       // To cast the object link to "More information" screen
+        destViewController.toGetResources = viewFromResources       // To cast the object link to "More information" screen
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = HeaderSegment.instanceFromNib()
-        box = view as? HeaderSegment
-        box?.referanceOnTableView = tableView
+        linkToGetHeader = headerView as? HeaderSegment
+        linkToGetHeader?.referanceOnTableView = tableView
 
-        return view
+        return headerView
     }
     
 }
