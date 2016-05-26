@@ -36,42 +36,12 @@
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                         </webView>
                         <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EQU-j3-AZQ">
-                            <rect key="frame" x="0.0" y="355" width="600" height="100"/>
+                            <rect key="frame" x="0.0" y="311" width="600" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="Ulj-17-INn" customClass="HeaderSegment" customModule="Sities_Countries" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="267" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ulj-17-INn" id="M0O-3C-q1m">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-2d-unX">
-                                            <rect key="frame" x="373" y="8" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-ox-M0a">
-                                            <rect key="frame" x="41" y="5" width="121" height="29"/>
-                                            <segments>
-                                                <segment title="First"/>
-                                                <segment title="Second"/>
-                                            </segments>
-                                            <connections>
-                                                <action selector="indexChanged:" destination="Ulj-17-INn" eventType="valueChanged" id="Fdr-H8-rbN"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="segmentControl" destination="jb9-ox-M0a" id="2cS-Ny-7qa"/>
-                                    <outlet property="textLabel" destination="Q3Q-2d-unX" id="qrN-mX-X3x"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AV" textLabel="kzf-Pm-HVU" style="IBUITableViewCellStyleDefault" id="O75-LJ-EzG">
-                                <rect key="frame" x="0.0" y="311" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="267" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O75-LJ-EzG" id="faw-8a-ZYK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -106,14 +76,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhd-h8-tv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="1kF-cl-zNp">
-                    <rect key="frame" x="0.0" y="0.0" width="121" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                    </segments>
-                </segmentedControl>
             </objects>
             <point key="canvasLocation" x="676" y="196"/>
         </scene>

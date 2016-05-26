@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA72A3A61CF6DED300A1510F /* ViewForSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72A3A51CF6DED300A1510F /* ViewForSegment.xib */; };
 		FA85D9D01CEDB45500E36F1B /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85D9CF1CEDB45500E36F1B /* CountriesTableViewController.swift */; };
 		FA9363511CEDE9A9001FD6C3 /* MoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9363501CEDE9A9001FD6C3 /* MoreInformation.swift */; };
 		FA9A429D1CF6615800520B34 /* headerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429C1CF6615800520B34 /* headerTableView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA72A3A51CF6DED300A1510F /* ViewForSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewForSegment.xib; sourceTree = "<group>"; };
 		FA85D9CF1CEDB45500E36F1B /* CountriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 		FA9363501CEDE9A9001FD6C3 /* MoreInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInformation.swift; sourceTree = "<group>"; };
 		FA9A429C1CF6615800520B34 /* headerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				FAD14A3F1CEC69E400C5A31D /* Assets.xcassets */,
 				FAD14A411CEC69E400C5A31D /* LaunchScreen.storyboard */,
 				FAD14A441CEC69E400C5A31D /* Info.plist */,
+				FA72A3A51CF6DED300A1510F /* ViewForSegment.xib */,
 			);
 			path = "Sities&Countries";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA72A3A61CF6DED300A1510F /* ViewForSegment.xib in Resources */,
 				FAD14A431CEC69E400C5A31D /* LaunchScreen.storyboard in Resources */,
 				FAD14A401CEC69E400C5A31D /* Assets.xcassets in Resources */,
 				FAD14A3E1CEC69E400C5A31D /* Main.storyboard in Resources */,

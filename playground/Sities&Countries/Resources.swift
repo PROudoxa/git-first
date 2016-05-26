@@ -13,6 +13,21 @@ class Resources: NSObject {
     var url: String = "https://ru.wikipedia.org"  // Default link for screen "moreInformation"
     var urlWebView: String = "http://apple.com"   // Link for webView on the main screen
     
+    //Array for Europe countries
+    let europeCountries: [String] = [
+        "Ger",
+        "Bel",
+        "Fra"
+    ]
+    
+    //Array for America countries
+    let americaCountries: [String] = [
+        "Urug",
+        "Cuba",
+        "Arge",
+        "Para"
+    ]
+    
     // Array for countries and their pictures
     let countriesArray = [
         (name: "Ukraine",        image: "ua"),
