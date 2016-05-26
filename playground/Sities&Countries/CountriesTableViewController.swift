@@ -52,7 +52,7 @@ class CountriesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         if let a = toGetResources {
             return a.countriesArray.count
-        } else {return 1}
+        } else { return 1 }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -80,10 +80,9 @@ class CountriesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView()
-        vw.backgroundColor = UIColor.greenColor()
+        let view = HeaderSegment.instanceFromNib()
         
-        return vw
+        return view
     }
     
 }
