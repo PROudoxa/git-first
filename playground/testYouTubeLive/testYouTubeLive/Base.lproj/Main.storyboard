@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testYouTubeLive" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-yE-rV8">
+                                <rect key="frame" x="75" y="113" width="224" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0fx-qJ-V6c"/>
+                                    <constraint firstAttribute="width" constant="224" id="x7s-ep-CIe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-8z-eY0">
+                                <rect key="frame" x="75" y="151" width="224" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="fkp-1t-8AE"/>
+                                    <constraint firstAttribute="height" constant="30" id="zVb-LF-6Wo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-fe-44J">
+                                <rect key="frame" x="133" y="217" width="108" height="58"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="5Uq-mK-YjQ"/>
+                                    <constraint firstAttribute="width" constant="108" id="FbX-fg-DVC"/>
+                                </constraints>
+                                <state key="normal" title="LogIn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgX-aN-9FT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bpf-yE-rV8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="6fc-dD-Ub8"/>
+                            <constraint firstItem="ixT-fe-44J" firstAttribute="top" secondItem="oJR-8z-eY0" secondAttribute="bottom" constant="36" id="AxJ-bo-SLf"/>
+                            <constraint firstItem="oJR-8z-eY0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGZ-qt-a53"/>
+                            <constraint firstItem="oJR-8z-eY0" firstAttribute="top" secondItem="Bpf-yE-rV8" secondAttribute="bottom" constant="8" id="V3i-Os-hCh"/>
+                            <constraint firstItem="ixT-fe-44J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cSq-Ic-jLc"/>
+                            <constraint firstItem="Bpf-yE-rV8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtD-FO-d3x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_login_button" destination="ixT-fe-44J" id="lOo-o5-jtU"/>
+                        <outlet property="_password" destination="oJR-8z-eY0" id="FID-vD-atY"/>
+                        <outlet property="_username" destination="Bpf-yE-rV8" id="sym-HU-hd2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

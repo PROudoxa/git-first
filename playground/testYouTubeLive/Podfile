@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+#platform :ios, '8.0'
+
+target 'testYouTubeLive' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+
+pod 'VideoCore/Swift', :git => 'https://github.com/maxcampolo/VideoCore.git'
+#pod 'VideoCore', '~>0.3.2'
+  use_frameworks!
+
+  # Pods for testYouTubeLive
+
+  target 'testYouTubeLiveTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

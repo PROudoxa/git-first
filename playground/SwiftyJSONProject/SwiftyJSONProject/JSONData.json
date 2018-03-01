@@ -1,0 +1,18 @@
+{
+    "Europe" : {
+        "Minsk" : {
+            "temperature" : "10",
+            "weather" : "Cloudy"
+        },
+        
+        "Madrid" : {
+            "temperature" : "12",
+            "weather" : "Sunny"
+        },
+        
+        "Riga" : {
+            "temperature" : "23",
+            "weather" : "Rainy"
+        }
+    }
+}

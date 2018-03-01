@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinimumQuantityOfCoins" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 Dollars" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-lX-kZI">
+                                <rect key="frame" x="234" y="128" width="133" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="2Ly-wN-2eP"/>
+                                    <constraint firstAttribute="width" constant="133" id="oUr-sU-6R2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="87 Cents" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe3-3u-NcQ">
+                                <rect key="frame" x="234" y="175" width="133" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="PMm-Um-IRH"/>
+                                    <constraint firstAttribute="height" constant="34" id="Ty5-5i-GR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50, 25, 10, 10, 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-vO-YN9">
+                                <rect key="frame" x="195" y="262" width="211" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="6nV-UI-5cK"/>
+                                    <constraint firstAttribute="height" constant="44" id="XPo-Vi-sAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN5-Fa-wyB">
+                                <rect key="frame" x="258" y="76" width="84" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JoA-hE-arl"/>
+                                    <constraint firstAttribute="width" constant="84" id="NzD-Yi-8xh"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="computeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvf-aj-Gbf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Coins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-ty-HbH">
+                                <rect key="frame" x="234" y="217" width="133" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="eof-Gh-2Oj"/>
+                                    <constraint firstAttribute="height" constant="37" id="q9V-kQ-dCm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="... Dollars \n .. Cents \n .. Coins \n   50, 25, 2, 2" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-pZ-TCh" userLabel="Results Text View">
+                                <rect key="frame" x="59" y="314" width="482" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7g-YR-iQx">
+                                <rect key="frame" x="231" y="28" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oly-3B-Stc"/>
+                                    <constraint firstAttribute="width" constant="138" id="xSx-pO-8rh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Iex-vO-YN9" firstAttribute="centerX" secondItem="Ayh-pZ-TCh" secondAttribute="centerX" id="Afj-yN-PBn"/>
+                            <constraint firstItem="o7g-YR-iQx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ERo-uy-Vj2"/>
+                            <constraint firstItem="JN5-Fa-wyB" firstAttribute="centerX" secondItem="RRX-lX-kZI" secondAttribute="centerX" id="H2a-Gu-f8W"/>
+                            <constraint firstItem="Uj7-ty-HbH" firstAttribute="centerX" secondItem="Iex-vO-YN9" secondAttribute="centerX" id="J8j-EU-rdH"/>
+                            <constraint firstItem="Ayh-pZ-TCh" firstAttribute="top" secondItem="Iex-vO-YN9" secondAttribute="bottom" constant="8" symbolic="YES" id="OIv-Bu-ugP"/>
+                            <constraint firstItem="Ayh-pZ-TCh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="OiZ-t4-Dwl"/>
+                            <constraint firstItem="Iex-vO-YN9" firstAttribute="top" secondItem="Uj7-ty-HbH" secondAttribute="bottom" constant="8" symbolic="YES" id="RqQ-RC-aqi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ayh-pZ-TCh" secondAttribute="bottom" constant="188" id="XT2-5q-lHb"/>
+                            <constraint firstItem="o7g-YR-iQx" firstAttribute="centerX" secondItem="JN5-Fa-wyB" secondAttribute="centerX" id="Ygo-yU-ik4"/>
+                            <constraint firstItem="RRX-lX-kZI" firstAttribute="top" secondItem="JN5-Fa-wyB" secondAttribute="bottom" constant="22" id="hIz-Hq-kG6"/>
+                            <constraint firstItem="o7g-YR-iQx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hdZ-EE-lSh"/>
+                            <constraint firstItem="RRX-lX-kZI" firstAttribute="leading" secondItem="xe3-3u-NcQ" secondAttribute="leading" id="kWn-Tw-aMA"/>
+                            <constraint firstItem="xe3-3u-NcQ" firstAttribute="leading" secondItem="Uj7-ty-HbH" secondAttribute="leading" id="kjm-Wo-rza"/>
+                            <constraint firstItem="Uj7-ty-HbH" firstAttribute="top" secondItem="xe3-3u-NcQ" secondAttribute="bottom" constant="8" symbolic="YES" id="oZN-ET-iaw"/>
+                            <constraint firstItem="xe3-3u-NcQ" firstAttribute="top" secondItem="RRX-lX-kZI" secondAttribute="bottom" constant="8" symbolic="YES" id="p34-3i-BRj"/>
+                            <constraint firstItem="JN5-Fa-wyB" firstAttribute="top" secondItem="o7g-YR-iQx" secondAttribute="bottom" constant="18" id="pSc-KG-sl5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VRp-9m-jqQ" appends="YES" id="mVe-AS-gVM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="coinsListLabel" destination="Iex-vO-YN9" id="hBi-rh-Rzw"/>
+                        <outlet property="quantityCentsLabel" destination="xe3-3u-NcQ" id="jt7-tY-xaL"/>
+                        <outlet property="quantityCoinsLabel" destination="Uj7-ty-HbH" id="wfT-2P-Ab0"/>
+                        <outlet property="quantityDollarsLabel" destination="RRX-lX-kZI" id="rFP-WC-uNo"/>
+                        <outlet property="resultsTextVie" destination="Ayh-pZ-TCh" id="OQm-7D-JPa"/>
+                        <outlet property="sumTextField" destination="o7g-YR-iQx" id="g7N-kd-cCI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VRp-9m-jqQ">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="UGP-lv-XkP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="357" y="429"/>
+        </scene>
+    </scenes>
+</document>
