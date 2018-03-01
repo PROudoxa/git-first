@@ -1,0 +1,12 @@
+[submodule "playground/UranTest"]
+	path = playground/UranTest
+	url = ../UranTest.git
+[submodule "playground/quandl_Test"]
+	path = playground/quandl_Test
+	url = ../quandl_test
+[submodule "playground/news/newsapi.git"]
+	path = playground/news/newsapi.git
+	url = ../newsapi.git
+[submodule "playground/LucidDreamsProtocolandValueOrientedProgrammingSampleCode/DiversidoMobile.git"]
+	path = playground/LucidDreamsProtocolandValueOrientedProgrammingSampleCode/DiversidoMobile.git
+	url = ../DiversidoMobile.git
