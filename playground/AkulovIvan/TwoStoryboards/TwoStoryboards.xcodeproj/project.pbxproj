@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FACD83321FF7A811004739B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD83311FF7A811004739B0 /* AppDelegate.swift */; };
+		FACD83341FF7A811004739B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD83331FF7A811004739B0 /* ViewController.swift */; };
+		FACD83371FF7A811004739B0 /* ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACD83351FF7A811004739B0 /* ipad.storyboard */; };
+		FACD83391FF7A811004739B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD83381FF7A811004739B0 /* Assets.xcassets */; };
+		FACD833C1FF7A811004739B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACD833A1FF7A811004739B0 /* LaunchScreen.storyboard */; };
+		FACD83441FF7A883004739B0 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACD83431FF7A883004739B0 /* iphone.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FACD832E1FF7A811004739B0 /* TwoStoryboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoStoryboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACD83311FF7A811004739B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FACD83331FF7A811004739B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FACD83361FF7A811004739B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ipad.storyboard; sourceTree = "<group>"; };
+		FACD83381FF7A811004739B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACD833B1FF7A811004739B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FACD833D1FF7A811004739B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACD83431FF7A883004739B0 /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACD832B1FF7A811004739B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACD83251FF7A811004739B0 = {
+			isa = PBXGroup;
+			children = (
+				FACD83301FF7A811004739B0 /* TwoStoryboards */,
+				FACD832F1FF7A811004739B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACD832F1FF7A811004739B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACD832E1FF7A811004739B0 /* TwoStoryboards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACD83301FF7A811004739B0 /* TwoStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				FACD83311FF7A811004739B0 /* AppDelegate.swift */,
+				FACD83331FF7A811004739B0 /* ViewController.swift */,
+				FACD83351FF7A811004739B0 /* ipad.storyboard */,
+				FACD83431FF7A883004739B0 /* iphone.storyboard */,
+				FACD83381FF7A811004739B0 /* Assets.xcassets */,
+				FACD833A1FF7A811004739B0 /* LaunchScreen.storyboard */,
+				FACD833D1FF7A811004739B0 /* Info.plist */,
+			);
+			path = TwoStoryboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACD832D1FF7A811004739B0 /* TwoStoryboards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACD83401FF7A811004739B0 /* Build configuration list for PBXNativeTarget "TwoStoryboards" */;
+			buildPhases = (
+				FACD832A1FF7A811004739B0 /* Sources */,
+				FACD832B1FF7A811004739B0 /* Frameworks */,
+				FACD832C1FF7A811004739B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoStoryboards;
+			productName = TwoStoryboards;
+			productReference = FACD832E1FF7A811004739B0 /* TwoStoryboards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACD83261FF7A811004739B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Alex Voronov";
+				TargetAttributes = {
+					FACD832D1FF7A811004739B0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GHALJQTKL9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FACD83291FF7A811004739B0 /* Build configuration list for PBXProject "TwoStoryboards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACD83251FF7A811004739B0;
+			productRefGroup = FACD832F1FF7A811004739B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACD832D1FF7A811004739B0 /* TwoStoryboards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACD832C1FF7A811004739B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACD833C1FF7A811004739B0 /* LaunchScreen.storyboard in Resources */,
+				FACD83391FF7A811004739B0 /* Assets.xcassets in Resources */,
+				FACD83371FF7A811004739B0 /* ipad.storyboard in Resources */,
+				FACD83441FF7A883004739B0 /* iphone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACD832A1FF7A811004739B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACD83341FF7A811004739B0 /* ViewController.swift in Sources */,
+				FACD83321FF7A811004739B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FACD83351FF7A811004739B0 /* ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACD83361FF7A811004739B0 /* Base */,
+			);
+			name = ipad.storyboard;
+			sourceTree = "<group>";
+		};
+		FACD833A1FF7A811004739B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACD833B1FF7A811004739B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACD833E1FF7A811004739B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACD833F1FF7A811004739B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACD83411FF7A811004739B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GHALJQTKL9;
+				INFOPLIST_FILE = TwoStoryboards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AlexV.TwoStoryboards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FACD83421FF7A811004739B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GHALJQTKL9;
+				INFOPLIST_FILE = TwoStoryboards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AlexV.TwoStoryboards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACD83291FF7A811004739B0 /* Build configuration list for PBXProject "TwoStoryboards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD833E1FF7A811004739B0 /* Debug */,
+				FACD833F1FF7A811004739B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACD83401FF7A811004739B0 /* Build configuration list for PBXNativeTarget "TwoStoryboards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD83411FF7A811004739B0 /* Debug */,
+				FACD83421FF7A811004739B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACD83261FF7A811004739B0 /* Project object */;
+}

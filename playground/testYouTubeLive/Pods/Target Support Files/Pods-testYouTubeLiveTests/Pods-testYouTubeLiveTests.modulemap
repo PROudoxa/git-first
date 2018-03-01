@@ -1,0 +1,6 @@
+framework module Pods_testYouTubeLiveTests {
+  umbrella header "Pods-testYouTubeLiveTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

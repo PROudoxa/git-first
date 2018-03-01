@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G18013" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIC-OY-nHv">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REK-6m-D9U">
+                                        <rect key="frame" x="8" y="33" width="84" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="DPG-uZ-c8G"/>
+                                            <constraint firstAttribute="width" constant="84" id="b3N-eR-QZj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.18543017267353601" blue="0.52324385851043376" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CK6-WN-ONW"/>
+                                    <constraint firstItem="REK-6m-D9U" firstAttribute="centerX" secondItem="GIC-OY-nHv" secondAttribute="centerX" id="duW-1Q-eeM"/>
+                                    <constraint firstItem="REK-6m-D9U" firstAttribute="centerY" secondItem="GIC-OY-nHv" secondAttribute="centerY" id="eVn-Qr-gZ8"/>
+                                    <constraint firstAttribute="width" constant="100" id="j4v-xV-w33"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vpS-a8-utY" appends="YES" id="9uI-7X-nsI"/>
+                                    <outletCollection property="gestureRecognizers" destination="qkP-lM-538" appends="YES" id="Eb1-i4-y0q"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ds3-YX-34s" appends="YES" id="qJ5-2Y-ijk"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-ax-iIa">
+                                <rect key="frame" x="137" y="127" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-V2-7uI">
+                                        <rect key="frame" x="8" y="33" width="84" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="F9C-xU-47C"/>
+                                            <constraint firstAttribute="width" constant="84" id="fae-ab-WGT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="gHj-V2-7uI" firstAttribute="centerY" secondItem="B6B-ax-iIa" secondAttribute="centerY" id="8Ig-V4-zB9"/>
+                                    <constraint firstAttribute="width" constant="100" id="XEE-04-HiO"/>
+                                    <constraint firstItem="gHj-V2-7uI" firstAttribute="centerX" secondItem="B6B-ax-iIa" secondAttribute="centerX" id="bPZ-G8-15V"/>
+                                    <constraint firstAttribute="height" constant="100" id="nMb-7c-LPG"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3pL-rN-0hF" appends="YES" id="NZo-MM-6nY"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GIC-OY-nHv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TuZ-Zd-lSu"/>
+                            <constraint firstItem="GIC-OY-nHv" firstAttribute="top" secondItem="B6B-ax-iIa" secondAttribute="bottom" constant="56" id="VUH-ep-Vez"/>
+                            <constraint firstItem="B6B-ax-iIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sxb-Gr-xCL"/>
+                            <constraint firstItem="GIC-OY-nHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zW3-MU-Sir"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="vpS-a8-utY">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="KnY-GE-iZS"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3pL-rN-0hF">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="BBa-wA-E1z"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="qkP-lM-538">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="R0G-vV-hLH"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Ds3-YX-34s">
+                    <connections>
+                        <action selector="handleRotation:" destination="BYZ-38-t0r" id="2to-qh-fdj"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

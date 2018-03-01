@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eh3-7A-RoH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="igC-bi-lVT">
+            <objects>
+                <tableViewController id="Qjc-hi-2G6" customClass="TableViewController" customModule="ParalaxTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wnu-px-38i" customClass="TableView" customModule="ParalaxTableView" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Q65-pW-nyZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-aK-MKt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="zgn-bz-52E"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.062050804930000002" green="1" blue="0.1754047202" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="Quk-aK-MKt" firstAttribute="leading" secondItem="Q65-pW-nyZ" secondAttribute="leading" id="U1s-Rg-rJB"/>
+                                <constraint firstAttribute="bottom" secondItem="Quk-aK-MKt" secondAttribute="bottom" id="c5E-Zd-qnh"/>
+                                <constraint firstAttribute="trailing" secondItem="Quk-aK-MKt" secondAttribute="trailing" id="e43-Rr-ANr"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Hp8-qd-Q9o">
+                                <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hp8-qd-Q9o" id="NVw-Ex-kNc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qjc-hi-2G6" id="NlD-mc-UuB"/>
+                            <outlet property="delegate" destination="Qjc-hi-2G6" id="6W3-Vp-wOv"/>
+                            <outlet property="heightConstraint" destination="zgn-bz-52E" id="15O-oj-gae"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rJ6-ye-pNQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5P-o3-JZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="93.103448275862078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IM8-SV-8bN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eh3-7A-RoH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZCh-cW-YLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qjc-hi-2G6" kind="relationship" relationship="rootViewController" id="jqy-zH-Nsr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ur-wz-kZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="landscape" width="138" height="91"/>
+    </resources>
+</document>

@@ -1,0 +1,10 @@
+framework module UtilsFramework {
+  umbrella header "UtilsFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilsFramework.Swift {
+    header "UtilsFramework-Swift.h"
+}

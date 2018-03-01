@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UtS-y3-iyC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Проверка слова-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpellChecker2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type your word here" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hi2-Rn-ifP">
+                                <rect key="frame" x="46" y="133" width="283" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="tQo-41-CRl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-dy-s31">
+                                <rect key="frame" x="138" y="207" width="99" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="TSf-D0-RAD"/>
+                                    <constraint firstAttribute="width" constant="99" id="mvt-7v-hs9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Check it!"/>
+                                <connections>
+                                    <action selector="checkItTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08m-SN-VeQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-8V-P1w">
+                                <rect key="frame" x="130" y="315" width="114" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Uwy-kp-OLu"/>
+                                    <constraint firstAttribute="height" constant="36" id="prs-0k-7SJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7cc-dy-s31" firstAttribute="top" secondItem="Hi2-Rn-ifP" secondAttribute="bottom" constant="44" id="6OX-xZ-QDj"/>
+                            <constraint firstItem="7cc-dy-s31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8yg-5w-VAg"/>
+                            <constraint firstItem="Q5z-8V-P1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TjF-Fo-5Q8"/>
+                            <constraint firstItem="Hi2-Rn-ifP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bMK-Gx-IpF"/>
+                            <constraint firstItem="Hi2-Rn-ifP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="fav-Eh-UgQ"/>
+                            <constraint firstItem="Q5z-8V-P1w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hKv-Xn-ezj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Проверка слова" id="glB-fz-Npo"/>
+                    <connections>
+                        <outlet property="label" destination="Q5z-8V-P1w" id="obX-wq-6ya"/>
+                        <outlet property="textField" destination="Hi2-Rn-ifP" id="Xl2-MB-4DL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mBu-0W-AxX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UtS-y3-iyC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4dV-YU-LZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DVN-v0-ckW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIF-C0-bnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="123"/>
+        </scene>
+    </scenes>
+</document>

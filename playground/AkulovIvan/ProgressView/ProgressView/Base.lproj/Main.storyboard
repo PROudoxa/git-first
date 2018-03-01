@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-c0-pfZ">
+                                <rect key="frame" x="31" y="332" width="300" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="lC2-H5-bNh"/>
+                                    <constraint firstAttribute="height" constant="2" id="vCV-Px-bd7"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.086744757980000003" green="1" blue="0.32484358759999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="1" green="0.14154431449999999" blue="0.1240953674" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdg-Ga-SIr">
+                                <rect key="frame" x="132" y="380" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YLe-a4-BU5"/>
+                                    <constraint firstAttribute="width" constant="110" id="f0e-Hq-io6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htq-aH-jz5">
+                                <rect key="frame" x="157" y="456" width="60" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.3988742354" blue="0.17639918099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ILx-C0-OCr"/>
+                                    <constraint firstAttribute="height" constant="36" id="zj2-zv-JuS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpL-ZQ-5o1">
+                                <rect key="frame" x="104" y="527" width="167" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="JTs-mN-pyK"/>
+                                    <constraint firstAttribute="width" constant="167" id="LVB-v5-vP3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Reset progress">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetProgressTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anJ-fb-FcM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95630267339999997" blue="0.1355539852" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hbt-c0-pfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-6.5" id="0B0-HT-eOu"/>
+                            <constraint firstItem="CpL-ZQ-5o1" firstAttribute="top" secondItem="htq-aH-jz5" secondAttribute="bottom" constant="35" id="2lw-zY-vpg"/>
+                            <constraint firstItem="Hbt-c0-pfZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BQn-cc-AbE"/>
+                            <constraint firstItem="Wdg-Ga-SIr" firstAttribute="top" secondItem="Hbt-c0-pfZ" secondAttribute="bottom" constant="46" id="Gnr-Xp-Xvj"/>
+                            <constraint firstItem="CpL-ZQ-5o1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IqL-Bi-Y0W"/>
+                            <constraint firstItem="Wdg-Ga-SIr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WlS-QF-lzQ"/>
+                            <constraint firstItem="htq-aH-jz5" firstAttribute="top" secondItem="Wdg-Ga-SIr" secondAttribute="bottom" constant="46" id="fCs-sf-6bu"/>
+                            <constraint firstItem="htq-aH-jz5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWq-8L-vZN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingLabel" destination="Wdg-Ga-SIr" id="PHM-Z3-vY9"/>
+                        <outlet property="loginButton" destination="htq-aH-jz5" id="dYo-ag-VHA"/>
+                        <outlet property="progressView" destination="Hbt-c0-pfZ" id="YiZ-L3-Ja4"/>
+                        <outlet property="resetButton" destination="CpL-ZQ-5o1" id="A79-Fy-IQx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

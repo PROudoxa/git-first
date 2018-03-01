@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G19009" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phisics_90" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-D1-XRl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEI-Jc-2xB">
+                                <rect key="frame" x="131.5" y="218" width="112" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="z70-rb-BF9">
+                                <rect key="frame" x="35.5" y="318.5" width="304" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GEQ-9r-9Mp"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69j-ze-ggP">
+                                <rect key="frame" x="137" y="388.5" width="101" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature   Converter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="La9-gE-eeK">
+                                <rect key="frame" x="24" y="28" width="327" height="51"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <color key="textColor" red="0.0060863512319877999" green="0.083421956795811436" blue="0.016311755590047966" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="La9-gE-eeK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Wt-RP-qQw"/>
+                            <constraint firstItem="z70-rb-BF9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3my-l6-fFw"/>
+                            <constraint firstItem="z70-rb-BF9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ATl-a8-Gg7"/>
+                            <constraint firstItem="pEI-Jc-2xB" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="112:667" id="CHP-f6-Lha"/>
+                            <constraint firstItem="69j-ze-ggP" firstAttribute="top" secondItem="z70-rb-BF9" secondAttribute="bottom" constant="40" id="CKP-Sr-ZEU"/>
+                            <constraint firstAttribute="trailing" secondItem="g1i-D1-XRl" secondAttribute="trailing" id="Fga-cV-0yI"/>
+                            <constraint firstItem="La9-gE-eeK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pEI-Jc-2xB" secondAttribute="trailing" constant="0.5" id="GCz-B5-rq5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="g1i-D1-XRl" secondAttribute="bottom" id="JYv-Tl-j0q"/>
+                            <constraint firstItem="z70-rb-BF9" firstAttribute="top" secondItem="pEI-Jc-2xB" secondAttribute="bottom" constant="40" id="JZl-Te-Wcf"/>
+                            <constraint firstItem="g1i-D1-XRl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PPC-id-XR5"/>
+                            <constraint firstItem="g1i-D1-XRl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RDm-Ds-OgH"/>
+                            <constraint firstItem="pEI-Jc-2xB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RFT-Mj-1Om"/>
+                            <constraint firstItem="z70-rb-BF9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="300:667" id="Xs3-Fg-uPv"/>
+                            <constraint firstItem="La9-gE-eeK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e10-r9-R7O"/>
+                            <constraint firstItem="La9-gE-eeK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-141" id="gDn-gJ-CEs">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="g1i-D1-XRl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="hjR-sE-T9u"/>
+                            <constraint firstItem="La9-gE-eeK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jJQ-Gd-NTG">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-10"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="La9-gE-eeK" secondAttribute="trailing" constant="32" id="mhS-Ic-sCw">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="69j-ze-ggP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qzr-nB-7zK"/>
+                            <constraint firstItem="g1i-D1-XRl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="upV-5j-sfm"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="La9-gE-eeK" secondAttribute="trailing" constant="-141" id="yR5-QB-uVn">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="69j-ze-ggP" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="101:667" id="zmQ-sc-HLb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GCz-B5-rq5"/>
+                                <exclude reference="gDn-gJ-CEs"/>
+                                <exclude reference="jJQ-Gd-NTG"/>
+                                <exclude reference="mhS-Ic-sCw"/>
+                                <exclude reference="yR5-QB-uVn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="2Wt-RP-qQw"/>
+                                <include reference="GCz-B5-rq5"/>
+                                <exclude reference="e10-r9-R7O"/>
+                                <include reference="jJQ-Gd-NTG"/>
+                                <include reference="mhS-Ic-sCw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="gDn-gJ-CEs"/>
+                                <include reference="yR5-QB-uVn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="celciumLabel" destination="pEI-Jc-2xB" id="TzB-UQ-VRc"/>
+                        <outlet property="farenheitLabel" destination="69j-ze-ggP" id="Ggb-3B-eeu"/>
+                        <outlet property="slider" destination="z70-rb-BF9" id="kPS-DA-mH5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.98050974512745" y="136.80000000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="phisics_90" width="487" height="650"/>
+    </resources>
+</document>
