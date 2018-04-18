@@ -18,6 +18,7 @@ Hi there,
 
 Welcome to app "Funny Rectangles"
 
+![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshotLogo.jpg)
 ![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot1.jpg)
 ![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot2.jpg)
 
