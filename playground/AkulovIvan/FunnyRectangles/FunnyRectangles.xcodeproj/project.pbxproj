@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		FA70E2DF2085C2A40095F295 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E2DE2085C2A40095F295 /* ImageManager.swift */; };
 		FA70E2E12085D4530095F295 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E2E02085D4530095F295 /* SettingsViewController.swift */; };
-		FA70E2E3208624BA0095F295 /* README.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA70E2E2208624BA0095F295 /* README.strings */; };
 		FAA1301820840F6400620097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1301720840F6400620097 /* AppDelegate.swift */; };
 		FAA1301A20840F6400620097 /* DesktopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1301920840F6400620097 /* DesktopViewController.swift */; };
 		FAA1301D20840F6400620097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1301B20840F6400620097 /* Main.storyboard */; };
 		FAA1301F20840F6400620097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1301E20840F6400620097 /* Assets.xcassets */; };
 		FAA1302220840F6400620097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1302020840F6400620097 /* LaunchScreen.storyboard */; };
+		FAE36AC320873E860047E676 /* screenshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAE36AC220873E860047E676 /* screenshot.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA70E2DE2085C2A40095F295 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		FA70E2E02085D4530095F295 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		FA70E2E2208624BA0095F295 /* README.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = README.strings; sourceTree = "<group>"; };
 		FAA1301420840F6400620097 /* FunnyRectangles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyRectangles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA1301720840F6400620097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA1301920840F6400620097 /* DesktopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +27,8 @@
 		FAA1301E20840F6400620097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA1302120840F6400620097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA1302320840F6400620097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE36AC02087196B0047E676 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAE36AC220873E860047E676 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = screenshot.jpg; path = ../../../../../Desktop/screenshot.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +73,7 @@
 				FAA1301720840F6400620097 /* AppDelegate.swift */,
 				FA70E2DE2085C2A40095F295 /* ImageManager.swift */,
 				FAA1301E20840F6400620097 /* Assets.xcassets */,
-				FA70E2E2208624BA0095F295 /* README.strings */,
+				FAE36AC220873E860047E676 /* screenshot.jpg */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -80,6 +81,7 @@
 		FAA1300B20840F6400620097 = {
 			isa = PBXGroup;
 			children = (
+				FAE36AC02087196B0047E676 /* README.md */,
 				FAA1301620840F6400620097 /* FunnyRectangles */,
 				FAA1301520840F6400620097 /* Products */,
 			);
@@ -165,10 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA70E2E3208624BA0095F295 /* README.strings in Resources */,
 				FAA1302220840F6400620097 /* LaunchScreen.storyboard in Resources */,
 				FAA1301F20840F6400620097 /* Assets.xcassets in Resources */,
 				FAA1301D20840F6400620097 /* Main.storyboard in Resources */,
+				FAE36AC320873E860047E676 /* screenshot.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

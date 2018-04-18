@@ -17,15 +17,15 @@ class SettingsViewController: UIViewController {
     let widthLimitKey: String = "widthLimit"
     let heightLimitKey: String = "heightLimit"
     
-    var currentWidthLimit: Int = 100 {
+    var currentWidthLimit: Int = 20 {
         willSet {
-            widthTextField.text = newValue > 20 ?  "\(newValue)" : "100"
+            widthTextField.text = newValue >= 20 ?  "\(newValue)" : "100"
         }
     }
     
-    var currentHeightLimit: Int = 100 {
+    var currentHeightLimit: Int = 20 {
         willSet {
-            heightTextField.text = newValue > 20 ?  "\(newValue)" : "100"
+            heightTextField.text = newValue >= 20 ?  "\(newValue)" : "100"
         }
     }
     

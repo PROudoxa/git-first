@@ -16,8 +16,21 @@ class DesktopViewController: UIViewController {
 
     // MARK: Properties
     let settingsController = SettingsViewController()
-    var widthLimit: CGFloat = 100.0
-    var heightLimit: CGFloat = 100.0
+    var widthLimit: CGFloat {
+        get {
+            let restored = CGFloat(UserDefaults.standard.value(forKey: settingsController.widthLimitKey) as? Float ?? 100.0)
+            return restored
+        }
+        //set {}
+    }
+    
+    var heightLimit: CGFloat {
+        get {
+            let restored = CGFloat(UserDefaults.standard.value(forKey: settingsController.heightLimitKey) as? Float ?? 100.0)
+            return restored
+        }
+        //set {}
+    }
     
     var allowedCreating = true
     var tag = 1
@@ -36,16 +49,22 @@ class DesktopViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var longPressGestureRecognizer: UILongPressGestureRecognizer!
     @IBOutlet weak var backgroundImageView: UIImageView!
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var addRectButton: UIButton!
+    
     // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rotateBackground() // for first launch
+        rotateBackground() // for first launch VC
         
-        // TODO: implement KVO or KVC
+        addRectButton.layer.cornerRadius = 5.0
+        
+        /*// TODO: implement KVO or KVC
         self.widthLimit = CGFloat(UserDefaults.standard.value(forKey: settingsController.widthLimitKey) as? Float ?? 100.0)
         self.heightLimit = CGFloat(UserDefaults.standard.value(forKey: settingsController.heightLimitKey) as? Float ?? 100.0)
+        
+        print("widthLimit: \(widthLimit) heightLimit: \(heightLimit)") */
         
         //guard let rotatable: Bool = UserDefaults.standard.value(forKey: "rotatedBackground") as? Bool, rotatable else { return }
         
@@ -62,7 +81,25 @@ extension DesktopViewController {
     
     @IBAction func addRectTapped(_ sender: UIButton) {
     // TODO: implement adding new rect
-        print("add tapped")
+        //print("add tapped")
+        
+        let widthScreen = self.view.bounds.width
+        let heightScreen = self.view.bounds.height
+        
+        var randX = CGFloat.randomFloat() * widthScreen
+        var randY = CGFloat.randomFloat() * heightScreen
+        
+        self.startPoint = CGPoint(x: randX, y: randY)
+        
+        randX = CGFloat.randomFloat() * widthScreen
+        randY = CGFloat.randomFloat() * heightScreen
+        
+        let diagonalPoint = CGPoint(x: randX, y: randY)
+
+        
+        initializeRectangle()
+        configureRectangle(with: diagonalPoint, durationAnimation: 1.0)
+        saveRectangle()
     }
     
     @IBAction func handleDeskLongPress(_ sender: UILongPressGestureRecognizer) {
@@ -78,7 +115,7 @@ extension DesktopViewController {
         case .changed:
             
             let newPoint = sender.location(in: self.view)
-            configureRectangle(with: newPoint)
+            configureRectangle(with: newPoint, durationAnimation: 0.2)
             
         case .ended:
             
@@ -140,7 +177,7 @@ private extension DesktopViewController {
         imageManager.changeBackground(firstTime: true)
     }
     
-    func configureRectangle(with newPoint: CGPoint)  {
+    func configureRectangle(with newPoint: CGPoint, durationAnimation: Double)  {
         
         // new point position relatively origin
         let incrementX = newPoint.x - self.startPoint.x
@@ -148,22 +185,22 @@ private extension DesktopViewController {
         
         // point is in (bottom + right) quarter
         if (incrementX >= 0) && (incrementY > 0) {
-            bottomRightCorner(replacedBy: newPoint)
+            bottomRightCorner(replacedBy: newPoint, duration: durationAnimation)
         }
         
         // new point is in (top + right) quarter
         if (incrementX >= 0) && (incrementY < 0) {
-            topRightCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY)
+            topRightCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY, duration: durationAnimation)
         }
         
         // new point is in (bottom + left) quarter
         if (incrementX < 0) && (incrementY >= 0) {
-            bottomLeftCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY)
+            bottomLeftCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY, duration: durationAnimation)
         }
         
         // new point is in (top + left) quarter
         if (incrementX < 0) && (incrementY <= 0) {
-            topLeftCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY)
+            topLeftCorner(replacedBy: newPoint, incrementX: incrementX, incrementY: incrementY, duration: durationAnimation)
         }
     }
     
@@ -180,41 +217,41 @@ private extension DesktopViewController {
         self.view.addSubview(currentRectView)
     }
     
-    func bottomRightCorner(replacedBy newPoint: CGPoint) {
+    func bottomRightCorner(replacedBy newPoint: CGPoint, duration: Double) {
         let incrementX = newPoint.x - self.currentOrigin.x
         let incrementY = newPoint.y - self.currentOrigin.y
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: duration, animations: {
             self.currentRectView.frame.size.width = incrementX
             self.currentRectView.frame.size.height = incrementY
         })
     }
     
-    func topRightCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat) {
+    func topRightCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat, duration: Double) {
         self.currentOrigin.y = newPoint.y
-        self.currentRectView.frame.origin = currentOrigin
         
-        UIView.animate(withDuration: 0.0001, animations: {
+        UIView.animate(withDuration: duration, animations: {
+            self.currentRectView.frame.origin = self.currentOrigin
             self.currentRectView.frame.size.width = incrementX
             self.currentRectView.frame.size.height = -incrementY
         })
     }
     
-    func bottomLeftCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat) {
+    func bottomLeftCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat, duration: Double) {
         self.currentOrigin.x = newPoint.x
-        self.currentRectView.frame.origin.x = self.currentOrigin.x
         
-        UIView.animate(withDuration: 0.0001, animations: {
+        UIView.animate(withDuration: duration, animations: {
+            self.currentRectView.frame.origin.x = self.currentOrigin.x
             self.currentRectView.frame.size.width = -incrementX
             self.currentRectView.frame.size.height = incrementY
         })
     }
     
-    func topLeftCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat) {
+    func topLeftCorner(replacedBy newPoint: CGPoint, incrementX: CGFloat, incrementY: CGFloat, duration: Double) {
         self.currentOrigin = newPoint
-        self.currentRectView.frame.origin = self.currentOrigin
         
-        UIView.animate(withDuration: 0.0001, animations: {
+        UIView.animate(withDuration: duration, animations: {
+            self.currentRectView.frame.origin = self.currentOrigin
             self.currentRectView.frame.size.width = -incrementX
             self.currentRectView.frame.size.height = -incrementY
         })
@@ -222,13 +259,13 @@ private extension DesktopViewController {
     
     func saveRectangle() {
         
-        if (currentRectView.frame.width > self.widthLimit) && (currentRectView.frame.height > self.heightLimit) {
+        if (self.currentRectView.frame.width > self.widthLimit) && (self.currentRectView.frame.height > self.heightLimit) {
             
-            currentRectView.backgroundColor = .randomColor()
-            currentRectView.tag = self.tag
+            self.currentRectView.backgroundColor = .randomColor()
+            self.currentRectView.tag = self.tag
             self.tag += 1
             
-            let recognizers: [UIGestureRecognizer] = setGestureRecognizers()
+            let recognizers: [UIGestureRecognizer] = self.setGestureRecognizers()
             
             // Separates one and two taps gestures
             if recognizers.count >= 2 {
@@ -236,12 +273,14 @@ private extension DesktopViewController {
             }
             
             for recognizer in recognizers {
-                currentRectView.addGestureRecognizer(recognizer)
-                longPressGestureRecognizer.require(toFail: recognizer)
+                self.currentRectView.addGestureRecognizer(recognizer)
+                self.longPressGestureRecognizer.require(toFail: recognizer)
             }
             
             currentRectView.removeGestureRecognizer(longPressGestureRecognizer)
-            
+            self.view.bringSubview(toFront: logoImageView)
+            self.view.bringSubview(toFront: addRectButton)
+
         } else {
 
             if (currentRectView.frame.width > 5.0) || (currentRectView.frame.height > 5.0) {
@@ -295,7 +334,9 @@ private extension DesktopViewController {
     // MARK: handle gestures
     @objc func handleTapToHighlight(_ sender: UITapGestureRecognizer) {
         self.view.bringSubview(toFront: sender.view!)
-        
+        self.view.bringSubview(toFront: logoImageView)
+        self.view.bringSubview(toFront: addRectButton)
+
         //print("one tap...")
         //print("tag: \(String(describing: sender.view?.tag))")
     }
@@ -337,6 +378,9 @@ private extension DesktopViewController {
         }
         
         sender.setTranslation(CGPoint.zero, in: self.view)
+        
+        self.view.bringSubview(toFront: logoImageView)
+        self.view.bringSubview(toFront: addRectButton)
     }
     
     @objc func handlePinch(_ sender: UIPinchGestureRecognizer) {

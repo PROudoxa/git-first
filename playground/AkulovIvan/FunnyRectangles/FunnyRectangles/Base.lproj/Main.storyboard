@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,12 +23,16 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3z-9I-qKC">
                                 <rect key="frame" x="323" y="72" width="83" height="36"/>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="Yqh-uh-ZzU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="83" id="Yqh-uh-ZzU"/>
                                     <constraint firstAttribute="height" constant="36" id="x0a-it-MUD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Rect"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Random">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addRectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjf-13-3Nn"/>
                                 </connections>
@@ -53,6 +56,7 @@
                             <constraint firstAttribute="trailing" secondItem="j3z-9I-qKC" secondAttribute="trailing" constant="8" id="UNU-Og-ImG"/>
                             <constraint firstAttribute="trailing" secondItem="l0n-Qg-hXf" secondAttribute="trailing" id="Xxi-Ji-deS"/>
                             <constraint firstItem="J2G-pf-pZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDK-GI-o1p"/>
+                            <constraint firstItem="j3z-9I-qKC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J2G-pf-pZL" secondAttribute="trailing" constant="8" id="ook-Bf-F0E"/>
                             <constraint firstItem="j3z-9I-qKC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="72" id="r8c-rF-R5l"/>
                         </constraints>
                         <connections>
@@ -68,7 +72,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="H1O-3C-BIe"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addRectButton" destination="j3z-9I-qKC" id="KEA-N6-ySZ"/>
                         <outlet property="backgroundImageView" destination="l0n-Qg-hXf" id="oBG-l6-j1g"/>
+                        <outlet property="logoImageView" destination="J2G-pf-pZL" id="lQa-tv-LuN"/>
                         <outlet property="longPressGestureRecognizer" destination="Eex-oc-2Sh" id="hLn-1p-cSx"/>
                     </connections>
                 </viewController>
@@ -190,7 +196,7 @@
                                 <color key="onTintColor" red="0.043137254899999998" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alert for autodeleting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QBX-WJ-8Ho">
-                                <rect key="frame" x="20" y="82" width="231" height="30"/>
+                                <rect key="frame" x="20.000000000000014" y="82" width="230.33333333333337" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.043137254899999998" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
