@@ -14,7 +14,6 @@
 		FAA1301D20840F6400620097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1301B20840F6400620097 /* Main.storyboard */; };
 		FAA1301F20840F6400620097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1301E20840F6400620097 /* Assets.xcassets */; };
 		FAA1302220840F6400620097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1302020840F6400620097 /* LaunchScreen.storyboard */; };
-		FAE36AC320873E860047E676 /* screenshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAE36AC220873E860047E676 /* screenshot.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		FAA1302120840F6400620097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA1302320840F6400620097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE36AC02087196B0047E676 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FAE36AC220873E860047E676 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = screenshot.jpg; path = ../../../../Desktop/screenshot.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				FAE36AC02087196B0047E676 /* README.md */,
-				FAE36AC220873E860047E676 /* screenshot.jpg */,
 				FAA1301620840F6400620097 /* FunnyRectangles */,
 				FAA1301520840F6400620097 /* Products */,
 			);
@@ -170,7 +167,6 @@
 				FAA1302220840F6400620097 /* LaunchScreen.storyboard in Resources */,
 				FAA1301F20840F6400620097 /* Assets.xcassets in Resources */,
 				FAA1301D20840F6400620097 /* Main.storyboard in Resources */,
-				FAE36AC320873E860047E676 /* screenshot.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
