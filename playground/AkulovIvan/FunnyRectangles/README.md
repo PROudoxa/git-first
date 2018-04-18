@@ -11,6 +11,14 @@ iOS 8.2.1 SDK or later
 iOS 9.0 or later 
 (for older version need to remove all UI elements from UIStackView(via Storyboard) and reinstall them without UIStackView )
 
+This app might be interesting for you if you are looking for implementing and handling follow gestures:
+
+UITapGestureRecognizer   (separated handling one tap and two taps)
+UIPinchGestureRecognizer (scaling separately in EACH axis of three(horizontal, vertical, diagonal) axises in main view as well in highlited view)
+UIRotationGestureRecognizer
+UIPanGestureRecognizer
+UILongPressGestureRecognizer
+
 
 ### About Funny Rectangles ###
 
@@ -19,7 +27,8 @@ Hi there,
 Welcome to app "Funny Rectangles"
 
 ![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshotLogo.jpg)
-![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot1.jpg)
+
+![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot.jpg)
 
 This app provides you opportunity for managing rectangles using gestures and having fun with them.
 
@@ -47,8 +56,8 @@ in Xcode menu go to:
 
 the app will be builing and run by Xcode
 
-Have fan!
-
+Have fun!
+Have a nice day!
 
 
 b) using Apple device(iPhone/iPad):
@@ -67,7 +76,8 @@ in Xcode menu go to:
 
 the app will be builing and run by Xcode
 
-Have fan!
+Have fun!
+Have a nice day!
 
 
 I hope the above is useful to you.
