@@ -1,0 +1,60 @@
+/* 
+  README.strings
+  FunnyRectangles
+
+  Created by Alex Voronov on 17.04.18.
+  Copyright © 2018 Alex Voronov. All rights reserved.
+*/
+
+/*
+A README with:
+Clear instruction on how to run the application.
+Instructions on how to build the application
+Any other thoughts or considerations you may have regarding the application and its implementation
+
+ ### BUILD ###
+ iOS 8.0 SDK or later
+ 
+ ### RUNTIME ###
+ iOS 6.0 or later
+
+ 
+ About Funny Rectangles
+ 
+Hello, dear User,
+
+
+I am glad to help you with my app "Funny Rectangles"
+
+
+This app provides you opportunity managing rectangles.
+
+you may:
+Creating, rotating, scaling, moving, changing color and the last option is deleting.
+
+
+
+getting started
+
+
+Building
+ 
+ a) using simulator iOS apps
+
+
+
+b) using Apple device(iPhone/iPad)
+
+
+Runing
+ 
+ before run this app you have to build it so if you have already skipped "build instruction" and you do not know how to build the app  you should back.
+
+a) using simulator iOS apps
+
+
+
+b) using Apple device(iPhone/iPad)
+
+*/
+
