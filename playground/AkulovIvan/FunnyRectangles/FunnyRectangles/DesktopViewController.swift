@@ -62,10 +62,7 @@ class DesktopViewController: UIViewController {
         
         /*// TODO: implement KVO or KVC
         self.widthLimit = CGFloat(UserDefaults.standard.value(forKey: settingsController.widthLimitKey) as? Float ?? 100.0)
-        self.heightLimit = CGFloat(UserDefaults.standard.value(forKey: settingsController.heightLimitKey) as? Float ?? 100.0)
-        
-        print("widthLimit: \(widthLimit) heightLimit: \(heightLimit)") */
-        
+        self.heightLimit = CGFloat(UserDefaults.standard.value(forKey: settingsController.heightLimitKey) as? Float ?? 100.0) */
         //guard let rotatable: Bool = UserDefaults.standard.value(forKey: "rotatedBackground") as? Bool, rotatable else { return }
     }
     
@@ -79,25 +76,14 @@ extension DesktopViewController {
     
     @IBAction func randomTapped(_ sender: UIButton) {
         
-        let widthScreen = self.view.bounds.width
-        let heightScreen = self.view.bounds.height
-        
-        var randX = CGFloat.randomFloat() * widthScreen
-        var randY = CGFloat.randomFloat() * heightScreen
-        
-        self.startPoint = CGPoint(x: randX, y: randY)
-        
-        randX = CGFloat.randomFloat() * widthScreen
-        randY = CGFloat.randomFloat() * heightScreen
-        
-        let diagonalPoint = CGPoint(x: randX, y: randY)
+        self.startPoint =  getRandomPointIn(alloyedArea: self.view)
+        let diagonalPoint = getRandomPointIn(alloyedArea: self.view)
 
-        
         initializeRectangle()
         configureRectangle(with: diagonalPoint, durationAnimation: 1.0)
         saveRectangle()
     }
-    
+        
     @IBAction func handleDeskLongPress(_ sender: UILongPressGestureRecognizer) {
         
         guard allowedCreating else { allowedCreating = true; return } // next touch on desktop allows creating rect
@@ -120,41 +106,10 @@ extension DesktopViewController {
     }
 }
 
-// MARK: UIGestureRecognizerDelegate
-extension DesktopViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        if gestureRecognizer == longPressGestureRecognizer {
-            print("out") // FIXME: never goes here
-            allowedCreating = true
-            
-            return true
-        }
-        
-        //print("point is in rect")
-        //disallow creating new rect if finger is on one of existing rectangles
-        allowedCreating = false
-        
-        return false
-    }
-}
-
 // MARK: DesktopBackgroundImageDelegate
 extension DesktopViewController: DesktopBackgroundImageDelegate {
 
     func setBackgroundImage(imageName: String) {
         self.backgroundImageView.image = UIImage(named: imageName)
-    }
-}
-
-// MARK: other extensions
-extension CGFloat {
-    static func randomFloat() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
-}
-
-extension UIColor {
-    static func randomColor() -> UIColor {
-        return UIColor(red:   .randomFloat(), green: .randomFloat(), blue:  .randomFloat(), alpha: 1.0)
     }
 }

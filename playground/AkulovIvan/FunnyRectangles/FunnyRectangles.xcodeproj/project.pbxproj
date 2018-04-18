@@ -46,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3B6F0D2087778900F0B31D /* DesktopVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1301920840F6400620097 /* DesktopViewController.swift */,
+				FA3B6F092087712100F0B31D /* CreateRectangleExtension.swift */,
+				FA3B6F0B2087720100F0B31D /* HandleGesturesEstension.swift */,
+				FA3B6F0720876DF600F0B31D /* Timer+AnimatingExtension.swift */,
+			);
+			name = DesktopVC;
+			sourceTree = "<group>";
+		};
 		FA70E2D920855D8D0095F295 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +76,8 @@
 		FA70E2DC20855DB20095F295 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAA1301920840F6400620097 /* DesktopViewController.swift */,
+				FA3B6F0D2087778900F0B31D /* DesktopVC */,
 				FA70E2E02085D4530095F295 /* SettingsViewController.swift */,
-				FA3B6F092087712100F0B31D /* CreateRectangleExtension.swift */,
-				FA3B6F0B2087720100F0B31D /* HandleGesturesEstension.swift */,
-				FA3B6F0720876DF600F0B31D /* Timer+AnimatingExtension.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
