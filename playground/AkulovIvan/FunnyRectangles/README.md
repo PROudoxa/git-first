@@ -13,22 +13,16 @@ iOS 9.0 or later
 
 This app might be interesting for you if you are looking for implementing and handling follow gestures:
 
-Markup : * Bullet list
-* Nested bullet
-* Sub-nested bullet etc
-* Bullet list item 2
-
-Markup : * UITapGestureRecognizer   (separated handling one tap and two taps)
-        * UITapGestureRecognizer (1 tap)
-             * UITapGestureRecognizer (2 taps)
-          * UIPinchGestureRecognizer (scaling separately in EACH axis of three(horizontal, vertical, diagonal) axises in main view as well in highlited view)
-          * UIPinchGestureRecognizer (scaling separately in EACH axis of three(horizontal, vertical, diagonal) axises in main view as well in highlited view)
-          * Nested UIPinchGestureRecognizer Horizontal (X)
-          * Nested UIPinchGestureRecognizer Vertical   (Y)
-          * Nested UIPinchGestureRecognizer Diagonal   (D)
-          * UIRotationGestureRecognizer
-          * UIPanGestureRecognizer
-          * UILongPressGestureRecognizer
+* UITapGestureRecognizer   (separated handling one tap and two taps)
+    * UITapGestureRecognizer (1 tap)
+    * UITapGestureRecognizer (2 taps)
+* UIPinchGestureRecognizer (scaling separately in EACH axis of three(horizontal, vertical, diagonal) axises in main view as well in highlited view)
+    * UIPinchGestureRecognizer Horizontal (X)
+    * UIPinchGestureRecognizer Vertical   (Y)
+    * UIPinchGestureRecognizer Diagonal   (D)
+* UIRotationGestureRecognizer
+* UIPanGestureRecognizer
+* UILongPressGestureRecognizer
 
 
 ### About Funny Rectangles ###
