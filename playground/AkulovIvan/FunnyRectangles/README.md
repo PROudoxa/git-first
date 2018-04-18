@@ -31,7 +31,7 @@ Create, rotate, scale, highlight, move, change color, delete.
 ### Building && Running ###
 
 
-![What is this](screenshot.jpg)
+![Screenshot](screenshot.jpg)
 
 a) using simulator iOS apps:
 
