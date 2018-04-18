@@ -28,7 +28,7 @@
 		FAA1302120840F6400620097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA1302320840F6400620097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE36AC02087196B0047E676 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FAE36AC220873E860047E676 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = screenshot.jpg; path = ../../../../../Desktop/screenshot.jpg; sourceTree = "<group>"; };
+		FAE36AC220873E860047E676 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = screenshot.jpg; path = ../../../../Desktop/screenshot.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,6 @@
 				FAA1301720840F6400620097 /* AppDelegate.swift */,
 				FA70E2DE2085C2A40095F295 /* ImageManager.swift */,
 				FAA1301E20840F6400620097 /* Assets.xcassets */,
-				FAE36AC220873E860047E676 /* screenshot.jpg */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -82,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE36AC02087196B0047E676 /* README.md */,
+				FAE36AC220873E860047E676 /* screenshot.jpg */,
 				FAA1301620840F6400620097 /* FunnyRectangles */,
 				FAA1301520840F6400620097 /* Products */,
 			);
