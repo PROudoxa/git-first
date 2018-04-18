@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3B6F0820876DF600F0B31D /* Timer+AnimatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B6F0720876DF600F0B31D /* Timer+AnimatingExtension.swift */; };
+		FA3B6F0A2087712100F0B31D /* CreateRectangleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B6F092087712100F0B31D /* CreateRectangleExtension.swift */; };
+		FA3B6F0C2087720100F0B31D /* HandleGesturesEstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B6F0B2087720100F0B31D /* HandleGesturesEstension.swift */; };
 		FA70E2DF2085C2A40095F295 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E2DE2085C2A40095F295 /* ImageManager.swift */; };
 		FA70E2E12085D4530095F295 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E2E02085D4530095F295 /* SettingsViewController.swift */; };
 		FAA1301820840F6400620097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1301720840F6400620097 /* AppDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3B6F0720876DF600F0B31D /* Timer+AnimatingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+AnimatingExtension.swift"; sourceTree = "<group>"; };
+		FA3B6F092087712100F0B31D /* CreateRectangleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRectangleExtension.swift; sourceTree = "<group>"; };
+		FA3B6F0B2087720100F0B31D /* HandleGesturesEstension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleGesturesEstension.swift; sourceTree = "<group>"; };
 		FA70E2DE2085C2A40095F295 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		FA70E2E02085D4530095F295 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FAA1301420840F6400620097 /* FunnyRectangles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyRectangles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,9 @@
 			children = (
 				FAA1301920840F6400620097 /* DesktopViewController.swift */,
 				FA70E2E02085D4530095F295 /* SettingsViewController.swift */,
+				FA3B6F092087712100F0B31D /* CreateRectangleExtension.swift */,
+				FA3B6F0B2087720100F0B31D /* HandleGesturesEstension.swift */,
+				FA3B6F0720876DF600F0B31D /* Timer+AnimatingExtension.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -177,10 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3B6F0C2087720100F0B31D /* HandleGesturesEstension.swift in Sources */,
+				FA3B6F0820876DF600F0B31D /* Timer+AnimatingExtension.swift in Sources */,
 				FAA1301A20840F6400620097 /* DesktopViewController.swift in Sources */,
 				FAA1301820840F6400620097 /* AppDelegate.swift in Sources */,
 				FA70E2E12085D4530095F295 /* SettingsViewController.swift in Sources */,
 				FA70E2DF2085C2A40095F295 /* ImageManager.swift in Sources */,
+				FA3B6F0A2087712100F0B31D /* CreateRectangleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
