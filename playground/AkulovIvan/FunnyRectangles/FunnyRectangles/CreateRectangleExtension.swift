@@ -29,7 +29,7 @@ extension DesktopViewController {
         let incrementX = newPoint.x - self.startPoint.x
         let incrementY = newPoint.y - self.startPoint.y
         
-        // point is in (bottom + right) quarter
+        // new point is in (bottom + right) quarter
         if (incrementX >= 0) && (incrementY > 0) {
             bottomRightCorner(replacedBy: newPoint, duration: durationAnimation)
         }
