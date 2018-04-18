@@ -18,7 +18,8 @@ Hi there,
 
 Welcome to app "Funny Rectangles"
 
-
+![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot1.jpg)
+![screenshot](https://github.com/PROudoxa/git-first/blob/master/screenshot2.jpg)
 
 This app provides you opportunity for managing rectangles using gestures and having fun with them.
 
@@ -29,16 +30,6 @@ Create, rotate, scale, highlight, move, change color, delete.
 ### Getting started ###
 
 ### Building && Running ###
-
-1
-![alt text](https://github.com/PROudoxa/git-first/blob/master/screenshot1.jpg)
-
-
-2
-![screenshot](docs/screenshot1.jpg)
-3
-[screenshot](docs/screenshot1.jpg)
-
 
 a) using simulator iOS apps:
 
